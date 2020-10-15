@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="<%=lang%>">
+	<head>
+
+		<title><%=title%></title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#f7fbff">
+		<!-- <meta name="theme-color" content="#f7fbff"> -->
+		<meta name="theme-color" content="#147CEE">
+
+		<meta name="description" content="@@description">
+		<meta property="og:url" content="http://design.modusbi.ru/<%=og_url%>">
+		<meta property="og:type" content="<%=og_type%>">
+		<meta property="og:title" content="<%=title%>">
+		<meta property="og:image" content="http://delomaks.andreybazykin.com/<%=og_image%>">
+		<meta property="og:description" content="<%=description%>">
+
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+	</head>
+	<body class="d-flex flex-column <%=pageClass%>">
+
+		<div class="frontend flex-grow-1">
+
+			<% if(typeof intro === 'undefined') { %>
+
+			<header class="header">
+				
+				<div class="container d-flex align-items-center justify-content-center justify-content-lg-start">
+					
+					<div class="header__logo mr-auto mr-lg-0">
+						<a href="/"></a>
+					</div>
+					
+					<div class="header__navigation d-flex flex-column align-items-start flex-lg-row align-items-lg-center justify-content-start ml-lg-auto">
+
+						<a href="javascript:;" class="header__navigation-close d-lg-none"></a>
+
+						<nav class="header__nav">
+							<ul class="header__nav-list d-lg-flex align-items-lg-center justify-content-lg-start">
+								<li class="nav-list__item --current">
+									<a href="javascript:;">Главная</a>
+								</li>
+								<li class="nav-list__item">
+									<a href="javascript:;">О нас</a>
+								</li>
+								<li class="nav-list__item --dropdown">
+									<a href="javascript:;">Продукты</a>
+									<div>
+										<ul>
+											<li>
+												<a href="javascript:;">МОДУС BI</a>
+											</li>
+											<li>
+												<a href="javascript:;">МОДУС ETL</a>
+											</li>
+											<li>
+												<a href="javascript:;">МОДУС Запасы</a>
+											</li>
+										</ul>
+										<a href="javascript:;" class="d-lg-none back">Назад</a>
+									</div>
+								</li>
+								<li class="nav-list__item d-lg-none d-xl-block">
+									<a href="javascript:;">Новости</a>
+								</li>
+								<li class="nav-list__item d-lg-none d-xl-block">
+									<a href="javascript:;">Документация</a>
+								</li>
+								<li class="nav-list__item">
+									<a href="javascript:;">Контакты</a>
+								</li>
+								<li class="nav-list__item --dropdown d-none d-lg-block d-xl-none">
+									<a href="javascript:;">Ещё</a>
+									<div>
+										<ul>
+											<li>
+												<a href="javascript:;">Новости</a>
+											</li>
+											<li>
+												<a href="javascript:;">Документация</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="header__phone d-lg-none">
+							<a href="tel:74951182814">+7 (495) 118-28-14</a>
+						</div>
+
+						<div class="header__email d-lg-none">
+							<a href="mailto:post@modusbi.ru">post@modusbi.ru</a>
+						</div>
+
+						<div class="header__social d-lg-none">
+							<div class="header__social-item --youtube">
+								<a href="//www.youtube.com/channel/UCahrY289uytuo9-Y408gXhQ" target="_blank">Мы на YouTube</a>
+							</div>
+							<div class="header__social-item --facebook">
+								<a href="javascript:;" target="_blank">Мы на Facebook</a>
+							</div>
+						</div>
+
+						<div class="header__search d-lg-flex flex-lg-wrap align-items-lg-center justify-content-lg-start">
+							<a href="javascript:;" class="header__search-icon-open order-1"></a>
+							<a href="javascript:;" class="header__search-icon-close order-1"></a>
+							<form action="/search/" method="get" class="header__search-form order-0">
+								<input type="text" name="q" class="search-form__input" placeholder="Поиск">
+							</form>
+						</div>
+
+					</div>
+
+					<div class="header__feedback mr-md-0">
+						<a href="javascript:;" class="btn btn-info btn-sm" data-modal="feedback">Связяться</a>
+					</div>
+
+					<div class="header__hamburger d-block d-lg-none">
+						<div class="hamburger hamburger--spin">
+                            <div class="hamburger-box">
+                                <div class="hamburger-inner"></div>
+                            </div>
+                        </div>
+					</div>
+
+				</div>
+
+			</header>
+
+			<% } %>
+
+			<main class="main">
+
+				

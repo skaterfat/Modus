@@ -1,0 +1,122 @@
+<% var data = {
+	lang:	"ru",
+	title:	"МОДУС Запасы",
+	description:	"МОДУС Запасы",
+	og_url:	"",
+	og_type:	"website",
+	og_image:	"og.png",
+	pageClass: "modus-ims-page"
+}; %>
+<%= _.template(require('./_include/header.html'))(data) %>
+
+<div class="modus-ims">
+	
+	<section class="modus-ims__hero">
+		
+		<div class="modus-ims__hero-wrap container flex-wrap flex-lg-nowrap d-flex align-items-center justify-content-start">
+			<div class="hero-content">
+				<h1 class="hero-content__title">МОДУС Запасы</h1>
+				<div class="hero-content__description">Управляйте запасами как лидеры отрасли</div>
+				<div class="hero-content__text"><strong>Оптимизируте запасы до 45%</strong> без риска для операционной деятельности. <strong>Сокращате неликвид. Увеличивайте оборачиваемость. Повышайте доход и снижайте издержки.</strong></div>
+				<div class="hero-content__buttons d-flex flex-column align-items-center justify-content-center d-md-block">
+					<a href="javascript:;" class="btn btn-primary">Демо кабинет</a>
+					<a href="javascript:;" class="btn btn-secondary"><span>Скачать презентацию</span></a>
+				</div>
+			</div>
+			<div class="hero-picture d-flex align-items-center justify-content-end">
+				<picture>
+					<source srcset="/images/modus/ims/hero@1x.webp 1x, /images/modus/ims/hero@2x.webp 2x" type="image/webp">
+					<source srcset="/images/modus/ims/hero@1x.png 1x, /images/modus/ims/hero@2x.png 2x">
+					<img src="/images/modus/ims/hero@1x.png" alt="" title="">
+				</picture>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="category-menu">
+
+		<div class="container">
+
+			<ul class="category-menu__list d-flex flex-wrap align-content-center justify-content-center">
+				<li class="menu-list__item --title">МОДУС Запасы</li>
+				<li class="menu-list__item">
+					<a href="javascript:;">О продукте</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="javascript:;">Для кого</a>
+				</li>
+				<li class="menu-list__item --dropdown">
+					<a href="javascript:;">Кейсы</a>
+					<div>
+						<ul>
+							<li>
+								<a href="javascript:;">Производитель автозапчастей</a>
+							</li>
+							<li>
+								<a href="javascript:;">Дистрибьютер продуктов питания</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="menu-list__item">
+					<a href="javascript:;">Тарифы</a>
+				</li>
+				<li class="menu-list__item">
+					<a href="javascript:;">Экспресс-аудит</a>
+				</li>
+			</ul>
+
+		</div>
+
+	</section>
+
+	<section class="modus-ims__about container d-flex flex-wrap align-items-center justify-content-start">
+
+		<div class="modus-ims__about-left">
+			<div class="h1">МОДУС Запасы</div>
+			<div class="modus-ims__about-description">Современная аналитическая система по управлению запасами это:</div>
+			<ul class="modus-ims__about-list">
+				<li class="about-list__item">Удобное Plug & Play бизнес-приложение. В течение нескольких дней подключается к ERP системе (1С, SAP, Oracle, файлы и т.д.)</li>
+				<li class="about-list__item">Встроенный алгоритм расчёта целевого запаса по каждому SKU (единица складского учета).</li>
+				<li class="about-list__item">Глубокая аналитика ваших запасов при использовании лучших практик сегментирования.</li>
+				<li class="about-list__item">«Единый источник правды» как эффективный инструмент внутреннего бенчмаркинга.</li>
+				<li class="about-list__item">Удобная визуализация и автоматизированная отчетность (включая планшет и смартфон).</li>
+			</ul>
+		</div>
+
+		<div class="modus-ims__about-right">
+			<div class="modus-ims__about-picture">
+				<picture>
+					<img src="/images/modus/ims/about.svg" alt="О продукте МОДУС Запасы" title="О продукте МОДУС Запасы">
+				</picture>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="modus-ims__video">
+
+		<div class="container">
+			<div class="h4 modus-ims__video-title">Посмотрите это видео, чтобы понять принцип работы:</div>			
+		</div>
+		
+		<div class="container d-flex flex-wrap align-items-center justify-content-start">
+			<div class="modus-ims__video-left">
+				
+			</div>
+			<div class="modus-ims__video-right">
+				<div class="h3 modus-ims__video-heading">Готовы попробовать самостоятельно?</div>
+				<div class="h3 modus-ims__video-text">Заполните форму, чтобы получить доступ к демо-версии продукта MODUS Запасы здесь и сейчас совершенно бесплатно.</div>
+				<div class="h3 modus-ims__video-button">
+					<a href="javascript:;" class="btn btn-primary">Демо-кабинет</a>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+</div>
+
+
+<%= _.template(require('./_include/footer.html'))(data) %>

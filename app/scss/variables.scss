@@ -1,0 +1,91 @@
+$black:		#000000;
+$blue:		#5187F9;
+$indigo:	#6610f2;
+$purple:	#2b2564;
+$pink:		#c53e8b;
+$rose:		#dcc1e2;
+$red:     #ff0000;
+$orange:	#ff6900;
+$yellow:  #FEC90C;
+$yellowhover:	#FFE03A;
+$green:		#28a745;
+$teal:		#20c997;
+$cyan:		#17a2b8;
+$white:		#ffffff;
+$darkgray: #1a1919;
+$footergray: #171717;
+$footertext: #8b8b8b;
+$lightgray: #f0f0f0;
+$lightgray: #9096A4;
+
+$standartcolor: #284388;
+$bodycolor: #FFFFFF;
+$selectionbg: #51E2E1;
+$selectioncolor: #147CEE;
+$lightblue: #F2F8FF;
+$darkblue: #002F6A;
+$linkhovercolor: #3696FF;
+
+$hamburger-padding-x           : 0px;
+$hamburger-padding-y           : 0px;
+$hamburger-layer-width         : 22px;
+$hamburger-layer-height        : 2px !default;
+$hamburger-layer-spacing       : 4px !default;
+$hamburger-layer-color         : $darkblue;
+$hamburger-layer-border-radius : 0px;
+$hamburger-hover-opacity       : 0.85;
+
+/*$fa-font-path:	"../fonts/webfonts";*/
+
+/*$hamburger-layer-color: #FFF;
+$hamburger-padding-y:	0px;
+$hamburger-padding-x:	0px;
+
+$border-radius:		.15rem;
+$border-radius-lg:	.15rem;
+$border-radius-sm:	.15rem;
+
+$font-family-sans-serif:	'Roboto', sans-serif;
+$font-family-monospace:		'Roboto', sans-serif;
+
+// $primary:	$indigo;
+
+// Links
+//
+// Style anchor elements.
+
+// $link-color:	$blue;
+//
+
+// Forms
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($pink, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+$input-focus-box-shadow: $input-btn-focus-box-shadow;
+$input-focus-border-color:              lighten($pink, 25%);
+
+$custom-select-focus-border-color:  $pink;
+$custom-file-focus-border-color:    $pink;*/
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 575.99px,
+  md: 767.99px,
+  lg: 991.99px,
+  xl: 1169.99px,
+  xxl: 1439.99px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px
+);
+
+$grid-columns: 24 !default;
+
+/*$slick-font-path: "../fonts/";
+$slick-loader-path: "../img/";*/

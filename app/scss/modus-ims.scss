@@ -1,0 +1,266 @@
+.modus-ims {
+
+	&__hero {
+
+		padding: 186px 0 156px;
+		background: radial-gradient(151.2% 260.55% at -10.94% 135.63%, #C4E0FF 0%, #ECF5FF 38.35%, #F7FBFF 83.26%);
+		overflow: hidden;
+
+		&-wrap {
+			background: url('../images/modus/ims/modus-ims-hero-bg.svg') calc(50% + 50px) calc(50% - 128px) no-repeat;
+		}
+
+		& .hero-content {
+
+			flex: 0 0 620px;
+			padding-right: 50px;
+
+			&__title {
+				margin-bottom: 10px;
+			}
+
+			&__description {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 34px;
+				line-height: 40px;
+				margin-bottom: 29px;
+			}
+
+			&__text {
+				margin-bottom: 75px;
+			}
+
+			&__buttons {
+
+				& > .btn:first-child {
+					margin-right: 25px;
+				}
+
+				& > .btn:last-child {
+
+					padding: 13px 45px 13px 30px;
+					position: relative;
+
+					&:focus {
+						padding: 15px 45px 15px 30px;
+					}
+
+					& span {
+
+						position: relative;
+
+						&:after {						
+							content: '';
+							display: inline-block;
+							width: 14px;
+							height: 14px;
+							background: url('../img/sprite/arrow-down-solid-btn.svg') 0 0 no-repeat;
+							margin-left: 10px;
+							position: absolute;
+							top: 3px;
+							right: -23px;
+							z-index: 100;
+						}
+
+					}
+
+					&:hover,
+					&:focus {
+
+						padding: 15px 45px 15px 30px;
+
+						& span {
+
+							&:after {
+								background: url('../img/sprite/arrow-down-solid-btn-hover.svg') 0 0 no-repeat;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+		& .hero-picture {
+
+			flex: 1;
+
+			& picture,
+			& img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				position: relative;
+				right: -20px;
+			}
+
+		}
+
+	}
+
+	&__about {
+		padding: 106px 0 121px;
+	}
+	
+}
+/***
+--- @media (max-width: 1440px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "xxl")) {
+
+	.modus-ims {
+
+		&__hero {
+
+			&-wrap {
+				background-position-y: calc(50% - 98px);
+			}
+
+		}
+
+	}
+
+}
+/***
+--- @media (max-width: 1170px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "xl")) {
+
+	.modus-ims {
+
+		&__hero {
+
+			&-wrap {
+				background-position-x: calc(50% + 100px);
+			}
+
+		}
+
+	}
+
+
+}
+/***
+--- @media (max-width: 992px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "lg")) {
+
+	.modus-ims {
+
+		&__hero {
+			
+			background: url('../images/modus/ims/modus-ims-hero-bg.svg') calc(0% - 50px) calc(100% - 80px) no-repeat,  radial-gradient(151.2% 260.55% at -10.94% 135.63%, #C4E0FF 0%, #ECF5FF 38.35%, #F7FBFF 83.26%);
+
+			&-wrap {
+				background: none;
+			}
+
+			& .hero-content {
+
+				flex: 0 0 100%;
+				padding-right: 0px;
+				margin-bottom: 45px;
+
+			}
+
+			& .hero-picture {
+				flex: 0 0 100%;
+			}
+
+		}
+
+	}
+
+}
+/***
+--- @media (max-width: 768px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "md")) {
+
+	.modus-ims {
+
+		&__hero {
+
+			& .hero-content {
+
+				/*&__buttons {
+
+					& > .btn:first-child {
+						margin-right: 15px;
+					}
+
+				}*/
+				&__buttons {
+
+					text-align: center;
+
+					& > .btn {
+						width: 270px;
+					}
+
+					& > .btn:first-child {
+						margin-right: 0px;
+						margin-bottom: 18px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+/***
+--- @media (max-width: 567px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "sm")) {
+
+	.modus-ims {
+
+
+		&__hero {
+
+			padding: 95px 0 100px;
+			background: url("../images/modus/ims/modus-ims-hero-bg.svg") calc(0% - 65px) calc(100% - 40px) no-repeat, radial-gradient(151.2% 260.55% at -10.94% 135.63%, #C4E0FF 0%, #ECF5FF 38.35%, #F7FBFF 83.26%);
+
+			& .hero-content {
+
+				&__description {
+					font-size: 24px;
+					line-height: 28px;
+					margin-bottom: 31px;
+				}
+
+				&__text {
+					margin-bottom: 32px;
+				}
+
+				/*&__buttons {
+
+					text-align: center;
+
+					& > .btn {
+						width: 265px;
+					}
+
+					& > .btn:first-child {
+						margin-right: 0px;
+						margin-bottom: 18px;
+					}
+
+				}*/
+
+			}
+
+		}
+
+	}
+
+}

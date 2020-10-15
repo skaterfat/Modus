@@ -1,0 +1,59 @@
+<% var data = {
+	lang:	"ru",
+	title:	"МОДУС",
+	description:	"МОДУС",
+	og_url:	"",
+	og_type:	"website",
+	og_image:	"og.png",
+	pageClass: "index-page",
+	intro: true
+}; %>
+<%= _.template(require('./_include/header.html'))(data) %>
+
+<div class="container-fluid p-5">
+
+	<div class="h1 mb-5">Страницы сайта</div>
+
+	<p class="h4 mb-4"><a href="product-ims.html">МОДУС Запасы (в процессе)</a></p>
+
+	<p class="h4 mb-4"><a href="case.html">Кейс (в процессе)</a></p>
+
+	<p class="h4 mb-4"><a href="express-diagnostic.html">Экспресс-диагностика (в процессе)</a></p>
+
+	<div class="h1 mt-5">UI Kit</div>
+
+	<div>
+		<h1>Заголовок H1</h1>
+		<h2>Заголовок H2</h2>
+		<h3>Заголовок H3</h3>
+		<h4>Заголовок H4</h4>
+		<h5>Заголовок H5</h5>
+		<h6 class="mb-4">Заголовок H6</h6>
+
+		<p>Основной текст Gilroy, SemBold, 18</p>		
+		<p class="mobile mb-4">Основной текст Gilroy, SemBold, 16</p>
+
+		<div class="mb-3">
+			<a href="javascript:;" class="btn btn-primary mr-3">Кнопка</a>
+			<a href="javascript:;" class="btn btn-secondary mr-3">Кнопка</a>
+			<a href="javascript:;" class="btn btn-info">Кнопка</a>			
+		</div>
+
+		<div class="mb-4">
+			<a href="javascript:;" class="btn btn-primary btn-sm mr-2">Кнопка</a>
+			<a href="javascript:;" class="btn btn-secondary btn-sm mr-2">Кнопка</a>
+			<a href="javascript:;" class="btn btn-info btn-sm mr-2">Кнопка</a>			
+		</div>
+
+		<p><a href="javascript:;">Ссылка</a></p>		
+		<p class="mobile mb-4"><a href="javascript:;">Ссылка</a></p>
+
+	</div>
+
+	<div class="h1 mt-5">Спрайт</div>
+
+	<p class="h4 mb-5"><img src="/img/sprite.svg" alt=""></p>
+
+</div>
+
+<%= _.template(require('./_include/footer.html'))(data) %>
