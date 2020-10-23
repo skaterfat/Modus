@@ -1,0 +1,48 @@
+	<section class="demo">
+
+		<div class="container d-flex flex-wrap align-items-center justify-content-center">
+			
+			<div class="demo__left">
+				<div class="demo__title">Оставить заявку</div>
+				<div class="demo__description">Заполните личные данные и наши специалисты свяжутся с Вами в ближайшее время.</div>
+				<form class="form demo__form">
+					<div class="form-group d-flex flex-wrap align-items-center justify-content-start">
+						<div class="form-group --left">
+							<input type="text" class="form-control demo__form-input" value="" placeholder="Имя">
+						</div>
+						<div class="form-group --right">
+							<input type="text" class="form-control demo__form-input" value="" placeholder="Ваша компания">							
+						</div>
+					</div>
+					<div class="form-group d-flex flex-wrap align-items-center justify-content-start">
+						<div class="form-group --left">
+							<input type="email" class="form-control demo__form-input" value="" placeholder="E-mail">
+						</div>
+						<div class="form-group --right">
+							<input type="tel" class="form-control demo__form-input mask-phone" value="" placeholder="Телефон">							
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control demo__form-input" value="" placeholder="Комментарий">
+					</div>
+					<div class="form-group --terms">
+						<input class="form-check-input" type="checkbox" value="" id="demo-terms-agree-<%=demoFormConfig.id%>" checked>
+						<label class="form-check-label" for="demo-terms-agree-<%=demoFormConfig.id%>">Я согласен на <a href="javascript:;">обработку персональных данных.</a></label>
+					</div>
+					<div class="form-group --submit">
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</div>
+				</form>
+			</div>
+			
+			<div class="demo__right">
+				<div class="demo__picture">
+					<picture>
+						<img src="/img/demo-mail.svg" alt="" title="">
+					</picture>
+				</div>
+			</div>
+
+		</div>
+		
+	</section>

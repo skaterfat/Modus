@@ -1,13 +1,16 @@
 .header {
 
-	padding: 20px 0;
+	padding: 0px 0 20px 0;
 	position: absolute;
-	top: 0;
+	top: 41px;
 	left: 0;
 	z-index: 110;
 	width: 100%;
 	
 	&__logo {
+		
+		position: relative;
+		top: -6px;
 
 	    flex: 0 0 140px;
 	    height: 28px;
@@ -27,6 +30,9 @@
 
 	&__nav {
 
+		position: relative;
+		top: -6px;
+
 		&-list {
 
 			margin: 0;
@@ -38,7 +44,7 @@
 				&__item {
 
 					margin: 0;
-					padding: 0 20px;
+					padding: 0 25px;
 					list-style: none;
 
 					&:first-child {
@@ -52,7 +58,7 @@
 					& a {
 
 						font-style: normal;
-						font-weight: 500;
+						font-weight: 400;
 						font-size: 15px;
 						line-height: 18px;
 
@@ -171,9 +177,11 @@
 
 		&-icon-open {
 			display: block;
-			width: 18px;
-			height: 18px;
+			width: 19px;
+			height: 19px;
 			background: url('../img/sprite/search-icon-header-normal.svg') 0 0 no-repeat;
+			position: relative;
+    		top: -6px;
 		}
 
 		&-icon-open:hover {
@@ -222,6 +230,12 @@
 		padding-left: 19px;
 		margin-left: 26px;
 		border-left: solid 1px rgba(31, 32, 65, 0.1);
+
+		& .btn, & .btn:hover {
+			font-size: 14px;
+			padding: 8px 28px 10px;
+		}
+
 	}
 
 	&__navigation.--search-opened {
@@ -251,6 +265,35 @@
 
 	&__navigation.--search-opened &__search-icon-close {
 		display: block;
+	}
+
+}
+
+/***
+--- @media (max-width: 1440px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "xxl")) {
+
+	.header {
+
+		&__nav {
+
+			&-list {
+
+				& .nav-list {
+
+					&__item {
+
+						padding: 0 20px;
+
+					}
+
+				}
+
+			}
+		
+		}
+
 	}
 
 }

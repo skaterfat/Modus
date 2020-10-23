@@ -137,6 +137,16 @@ module.exports = {
 			template: './app/product-ims.html',
 			minify: false
 		}),
+		new HtmlWebpackPlugin({
+    		filename: 'express-diagnostic.html',
+			template: './app/express-diagnostic.html',
+			minify: false
+		}),
+		new HtmlWebpackPlugin({
+    		filename: 'case.html',
+			template: './app/case.html',
+			minify: false
+		}),
 		new SpritePlugin({
 			filename: 'sprite.svg',
 			publicPath: './htdocs/'

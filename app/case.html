@@ -1,0 +1,19 @@
+<% var data = {
+	lang:	"ru",
+	title:	"Кейс",
+	description:	"Кейс",
+	og_url:	"",
+	og_type:	"website",
+	og_image:	"og.png",
+	pageClass: "case-page"
+}; %>
+<%= _.template(require('./_include/header.html'))(data) %>
+
+<div class="case">
+
+	<%= _.template(require('./_include/demo-form.html'), {variable: 'demoFormConfig'})({id: "1"}) %>
+
+</div>
+
+
+<%= _.template(require('./_include/footer.html'))(data) %>

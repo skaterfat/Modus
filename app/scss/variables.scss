@@ -26,6 +26,10 @@ $lightblue: #F2F8FF;
 $darkblue: #002F6A;
 $linkhovercolor: #3696FF;
 
+$maingradient: linear-gradient(180deg, #51E2E1 20.83%, rgba(255, 255, 255, 0) 100%, rgba(81, 226, 225, 0) 100%), #147CEE;
+$maingradientreverse: linear-gradient(0deg, #51E2E1 20.83%, rgba(255, 255, 255, 0) 100%, rgba(81, 226, 225, 0) 100%), #147CEE;
+$pinkgradient: linear-gradient(180deg, #E368E3 0%, rgba(227, 104, 227, 0) 84.37%), #FE2573;
+
 $hamburger-padding-x           : 0px;
 $hamburger-padding-y           : 0px;
 $hamburger-layer-width         : 22px;

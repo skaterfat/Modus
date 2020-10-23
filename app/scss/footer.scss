@@ -189,7 +189,50 @@
 
 	&__download-presentation {
 
-		& a {
+		& a.gradient-button {
+		
+			& > span {
+				
+				background: #364560;
+
+				& > span {
+
+					padding: 13px 22px 13px 27px;
+					position: relative;
+
+					&:after {
+						content: '';
+						display: inline-block;
+						width: 14px;
+						height: 14px;
+						background: url('../img/sprite/arrow-down-gradient-btn.svg') 0 0 no-repeat;
+						margin-left: 10px;
+						position: relative;
+						top: 2px;
+					}
+
+				}
+
+			}
+
+			&:hover {
+
+				& > span {
+
+					& > span {
+
+						&:after {
+							background: url('../img/sprite/arrow-down-gradient-btn-hover.svg') 0 0 no-repeat;
+						}
+
+					}
+
+				}
+			}
+
+		}
+
+		/*& a:not(.gradient-button) {
 			
 			padding: 15px 2px;
 			display: inline-block;
@@ -211,7 +254,7 @@
 					font-weight: 600;
 					font-size: 16px;
 					line-height: 19px;
-					background: linear-gradient(180deg, #51E2E1 20.83%, rgba(255, 255, 255, 0) 100%, rgba(81, 226, 225, 0) 100%), #147CEE;;
+					background: linear-gradient(180deg, #51E2E1 20.83%, rgba(255, 255, 255, 0) 100%, rgba(81, 226, 225, 0) 100%), #147CEE;
 					color: transparent;
 					background-clip: text;
 					text-fill-color: transparent;
@@ -254,7 +297,7 @@
 
 			}
 
-		}
+		}*/
 
 	}
 
