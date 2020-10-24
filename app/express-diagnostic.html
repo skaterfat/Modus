@@ -10,6 +10,32 @@
 <%= _.template(require('./_include/header.html'))(data) %>
 
 <div class="express-diagnostic">
+	
+	<section class="express-diagnostic__hero">
+		
+		<div class="express-diagnostic__hero-wrap container flex-wrap flex-lg-nowrap d-flex align-items-center justify-content-start">
+			<div class="hero-content">
+				<h1 class="hero-content__title">Экспресс&mdash;диагностика</h1>
+				<div class="hero-content__description"><strong>бесплатно</strong> покажем, как эффективно управлять вашими запасами</div>
+				<div class="hero-content__text"><strong>Цель экспресс-диагностики</strong> в том, чтобы <strong>наглядно отобразить, как эффективно управлять вашими запасами</strong>  с помощью нашего бизнес&mdash;приложения.</div>
+				<div class="hero-content__buttons d-flex flex-column align-items-center justify-content-center d-md-block">
+					<a href="javascript:;" class="btn btn-primary">Начать экспресс&mdash;диагностику</a>
+				</div>
+			</div>
+			<div class="hero-picture d-flex align-items-center justify-content-end">
+				<picture>
+					<img src="/images/express-diagnostic/hero.svg" alt="" title="">
+				</picture>
+			</div>
+		</div>
+
+	</section>
+
+	<%= _.template(require('./_include/category-menu.html'), {variable: 'categoryMenu'})({active: "Экспресс-аудит"}) %>
+
+	<%= _.template(require('./_include/contact-block.html'), {variable: 'contactBlockText'})({text: "В случае возникновения вопросов по формату данных, вы можете связаться с нами в любое удобное для вас время"}) %>
+
+	<%= _.template(require('./_include/demo-access.html'), {variable: 'demoAccess'})({text: "Пока мы готовим данные экспресс-диагностики, получите доступ к демо-кабинету и оцени функционал самостоятельно"}) %>
 
 
 </div>

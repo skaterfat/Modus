@@ -1,0 +1,41 @@
+
+	<section class="category-menu">
+
+		<div class="category-menu__wrap">
+
+			<div class="container">
+
+				<ul class="category-menu__list d-flex flex-wrap align-content-center justify-content-center">
+					<li class="menu-list__item --title">МОДУС Запасы</li>
+					<li class="menu-list__item">
+						<a href="javascript:;">О продукте</a>
+					</li>
+					<li class="menu-list__item">
+						<a href="javascript:;">Для кого</a>
+					</li>
+					<li class="menu-list__item --dropdown<% if(typeof categoryMenu !== 'undefined' && categoryMenu.active == 'Кейсы') { %> --active<% } %>">
+						<a href="javascript:;">Кейсы</a>
+						<div>
+							<ul>
+								<li>
+									<a href="javascript:;">Производитель автозапчастей</a>
+								</li>
+								<li>
+									<a href="javascript:;">Дистрибьютер продуктов питания</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu-list__item">
+						<a href="javascript:;">Тарифы</a>
+					</li>
+					<li class="menu-list__item<% if(typeof categoryMenu !== 'undefined' && categoryMenu.active == 'Экспресс-аудит') { %> --active<% } %>">
+						<a href="javascript:;">Экспресс-аудит</a>
+					</li>
+				</ul>
+
+			</div>
+			
+		</div>
+
+	</section>

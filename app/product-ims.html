@@ -19,7 +19,7 @@
 				<div class="hero-content__description">Управляйте запасами как лидеры отрасли</div>
 				<div class="hero-content__text"><strong>Оптимизируте запасы до 45%</strong> без риска для операционной деятельности. <strong>Сокращате неликвид. Увеличивайте оборачиваемость. Повышайте доход и снижайте издержки.</strong></div>
 				<div class="hero-content__buttons d-flex flex-column align-items-center justify-content-center d-md-block">
-					<a href="javascript:;" class="btn btn-primary">Демо-кабинет</a>
+					<a href="javascript:;" class="btn btn-primary">Демо&mdash;кабинет</a>
 					<a href="javascript:;" class="btn btn-secondary"><span>Скачать презентацию</span></a>
 				</div>
 			</div>
@@ -34,46 +34,7 @@
 
 	</section>
 
-	<section class="category-menu">
-
-		<div class="category-menu__wrap">
-
-			<div class="container">
-
-				<ul class="category-menu__list d-flex flex-wrap align-content-center justify-content-center">
-					<li class="menu-list__item --title">МОДУС Запасы</li>
-					<li class="menu-list__item">
-						<a href="javascript:;">О продукте</a>
-					</li>
-					<li class="menu-list__item">
-						<a href="javascript:;">Для кого</a>
-					</li>
-					<li class="menu-list__item --dropdown">
-						<a href="javascript:;">Кейсы</a>
-						<div>
-							<ul>
-								<li>
-									<a href="javascript:;">Производитель автозапчастей</a>
-								</li>
-								<li>
-									<a href="javascript:;">Дистрибьютер продуктов питания</a>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li class="menu-list__item">
-						<a href="javascript:;">Тарифы</a>
-					</li>
-					<li class="menu-list__item">
-						<a href="javascript:;">Экспресс-аудит</a>
-					</li>
-				</ul>
-
-			</div>
-			
-		</div>
-
-	</section>
+	<%= _.template(require('./_include/category-menu.html'), {variable: 'categoryMenu'})({active: "Кейсы"}) %>
 
 	<section class="modus-ims__about container d-flex flex-wrap align-items-end justify-content-center">
 
@@ -81,7 +42,7 @@
 			<div class="modus-ims__about-title">МОДУС Запасы</div>
 			<div class="modus-ims__about-description">Современная аналитическая система по управлению запасами это:</div>
 			<ul class="modus-ims__about-list">
-				<li class="about-list__item"><strong>Удобное Plug & Play бизнес-приложение.</strong> В течение нескольких дней подключается к ERP системе (1С, SAP, Oracle, файлы и т.д.)</li>
+				<li class="about-list__item"><strong>Удобное Plug & Play бизнес&mdash;приложение.</strong> В течение нескольких дней подключается к ERP системе (1С, SAP, Oracle, файлы и т.д.)</li>
 				<li class="about-list__item"><strong>Встроенный алгоритм расчёта целевого запаса</strong> по каждому SKU (единица складского учета).</li>
 				<li class="about-list__item">Глубокая <strong>аналитика ваших запасов</strong> при использовании лучших практик сегментирования.</li>
 				<li class="about-list__item"><strong>«Единый источник правды»</strong> как эффективный инструмент внутреннего бенчмаркинга.</li>
@@ -115,9 +76,9 @@
 
 			<div class="modus-ims__video-right">
 				<div class="modus-ims__video-heading">Готовы попробовать самостоятельно?</div>
-				<div class="modus-ims__video-text">Заполните форму, чтобы получить доступ к демо-версии продукта <strong>MODUS Запасы здесь и сейчас совершенно бесплатно.</strong></div>
+				<div class="modus-ims__video-text">Заполните форму, чтобы получить доступ к демо&mdash;версии продукта <strong>MODUS Запасы здесь и сейчас совершенно бесплатно.</strong></div>
 				<div class="modus-ims__video-button">
-					<a href="javascript:;" class="btn btn-primary">Демо-кабинет</a>
+					<a href="javascript:;" class="btn btn-primary">Демо&mdash;кабинет</a>
 				</div>
 			</div>
 		</div>
@@ -297,7 +258,7 @@
 
 	<section class="modus-ims__capabilities container">
 		
-		<div class="capabilities__title">Какие возможности предоставит наше бизнес-приложение? </div>
+		<div class="capabilities__title">Какие возможности предоставит наше бизнес&mdash;приложение? </div>
 
 		<div class="capabilities__row d-flex align-items-center justify-content-center">
 			<div class="capabilities__row-left">
@@ -306,7 +267,7 @@
 				<ul class="capabilities__list list-type-1">
 					<li class="capabilities__list-item list-type-1__item">Рассчитывайте оптимальный уровень запасов.</li>
 					<li class="capabilities__list-item list-type-1__item">Отслеживайте SKU с перезапасами (критическими запасами).</li>
-					<li class="capabilities__list-item list-type-1__item">Проводите причинно-следственный анализ.</li>
+					<li class="capabilities__list-item list-type-1__item">Проводите причинно&mdash;следственный анализ.</li>
 					<li class="capabilities__list-item list-type-1__item">Отслеживайте динамику сокращения (увеличения) запасов.</li>
 					<li class="capabilities__list-item list-type-1__item">Расширяйте возможности за счет предиктивной аналитики.</li>
 				</ul>
@@ -367,7 +328,7 @@
 
 	</section>
 
-	<%= _.template(require('./_include/demo-access.html'))() %>
+	<%= _.template(require('./_include/demo-access.html'), {variable: 'demoAccess'})({text: "Получите доступ к демо-кабинету и оцените функционал самостоятельно"}) %>
 
 	<section class="modus-ims__functional container">
 		
@@ -503,7 +464,7 @@
 
 	</section>
 
-	<%= _.template(require('./_include/demo-access.html'))() %>
+	<%= _.template(require('./_include/demo-access.html'), {variable: 'demoAccess'})({text: "Получите доступ к демо-кабинету и оцените функционал самостоятельно"}) %>
 
 	<section class="modus-ims__for-whom">
 
@@ -513,14 +474,14 @@
 
 				<div class="for-whom__title">Для кого?</div>
 
-				<div class="for-whom__description">Наше бизнес-приложение подойдет следующим компаниям:</div>
+				<div class="for-whom__description">Наше бизнес&mdash;приложение подойдет следующим компаниям:</div>
 
 				<ul class="for-whom__list list-type-1">
 					<li class="for-whom__list-item list-type-1__item">Крупным и малым, в различных отраслях: ритейл, промышленность и других. Подробнее об отраслях ниже.</li>
 					<li class="for-whom__list-item list-type-1__item">Имеющим запасы на разных стадиях: от сырья до готовой продукции.</li>
 					<li class="for-whom__list-item list-type-1__item">С высокой долей «‎ручного планирования» и низкой прозрачностью.</li>
 					<li class="for-whom__list-item list-type-1__item">Находящимся в поисках эффективного инструмента контроля запасов и закупок.</li>
-					<li class="for-whom__list-item list-type-1__item">Нежелающим долго внедрять ИТ-системы с непрозрачным сроком окупаемости.</li>
+					<li class="for-whom__list-item list-type-1__item">Нежелающим долго внедрять ИТ&mdash;системы с непрозрачным сроком окупаемости.</li>
 				</ul>
 				
 				<div class="for-whom__tabs">
@@ -645,7 +606,7 @@
 		
 		<div class="container">
 			
-			<div class="industries__title text-center">Бизнес-приложение <strong>MODUS Запасы</strong> актуально и для других отраслей:</div>
+			<div class="industries__title text-center">Бизнес&mdash;приложение <strong>MODUS Запасы</strong> актуально и для других отраслей:</div>
 
 			<div class="industries__list">
 
@@ -663,7 +624,7 @@
 						
 					</div>
 
-					<div class="industries__list-heading">В отрасли добычи ресурсов бизнес-приложение используется для нужд планирования как запасов материалов и продукции основного производства, так и косвенных материалов (включая запасные части для оборудования, горюче-смазочные материалы).</div>
+					<div class="industries__list-heading">В отрасли добычи ресурсов бизнес&mdash;приложение используется для нужд планирования как запасов материалов и продукции основного производства, так и косвенных материалов (включая запасные части для оборудования, горюче&mdash;смазочные материалы).</div>
 
 					<div class="industries__list-text">
 						<p>Дополнительные эффекты возможны за счет интеграции предиктивной аналитики (включая превентивное обслуживание оборудования) аномалий и подозрительных изменений.</p>
@@ -975,7 +936,7 @@
 					</div>
 					
 					<div class="tariffs__list-right">
-						<div class="tariffs__list-description --lite">Бизнес-приложение, к которому <strong>можно подключиться через 1С (УТ, КА), файлы в преднастроенном темплейте</strong> (пример экспресс-диагностики) <strong>и визуализировать текущие данные по запасам на складе с преднастроенными алгоритмами расчета целевого уровня запаса.</strong></div>
+						<div class="tariffs__list-description --lite">Бизнес&mdash;приложение, к которому <strong>можно подключиться через 1С (УТ, КА), файлы в преднастроенном темплейте</strong> (пример экспресс&mdash;диагностики) <strong>и визуализировать текущие данные по запасам на складе с преднастроенными алгоритмами расчета целевого уровня запаса.</strong></div>
 						<div class="tariffs__list-buttons">							
 							<a href="javascript:;" class="btn btn-primary">Подключить</a>
 							<a href="javascript:;" class="btn btn-secondary">Полная информация по тарифам</a>
@@ -1015,7 +976,7 @@
 					</div>
 					
 					<div class="tariffs__list-right">
-						<div class="tariffs__list-description --progressive">Бизнес-приложение, к которому <strong>можно подключиться через ERP-cистему через 1С, SAP, Oracle и т.д. (включая файлы) и визуализировать текущие данные по запасам на складе с дополнительной настройкой алгоритма расчета целевого уровня запаса.</strong></div>
+						<div class="tariffs__list-description --progressive">Бизнес&mdash;приложение, к которому <strong>можно подключиться через ERP-cистему через 1С, SAP, Oracle и т.д. (включая файлы) и визуализировать текущие данные по запасам на складе с дополнительной настройкой алгоритма расчета целевого уровня запаса.</strong></div>
 						<div class="tariffs__list-buttons">							
 							<a href="javascript:;" class="btn btn-primary">Подключить</a>
 							<a href="javascript:;" class="btn btn-secondary">Полная информация по тарифам</a>
@@ -1055,7 +1016,7 @@
 					</div>
 					
 					<div class="tariffs__list-right">
-						<div class="tariffs__list-description --individual">Бизнес-приложение, к которому <strong>можно подключиться через ERP-cистему через 1С, SAP, Oracle и т.д. и визуализировать текущие данные по запасам на складе с настройкой алгоритма расчета целевого уровня запаса и инструментов предикитивной аналитики</strong> (включая прогнозирование спроса).</div>
+						<div class="tariffs__list-description --individual">Бизнес&mdash;приложение, к которому <strong>можно подключиться через ERP-cистему через 1С, SAP, Oracle и т.д. и визуализировать текущие данные по запасам на складе с настройкой алгоритма расчета целевого уровня запаса и инструментов предикитивной аналитики</strong> (включая прогнозирование спроса).</div>
 						<div class="tariffs__list-buttons">							
 							<a href="javascript:;" class="btn btn-primary">Подключить</a>
 							<a href="javascript:;" class="btn btn-secondary">Полная информация по тарифам</a>
@@ -1070,17 +1031,17 @@
 
 	</section>
 
-	<%= _.template(require('./_include/contact-block.html'))() %>
+	<%= _.template(require('./_include/contact-block.html'), {variable: 'contactBlockText'})({text: "Наши специалисты с радостью ответят на любые ваши вопросы"}) %>
 
 	<section class="modus-ims__get-express-diagnostic">
 
 		<div class="container">
 			
-			<div class="get-express-diagnostic__title">Закажите бесплатную экспресс-диагностику ваших запасов!</div>
+			<div class="get-express-diagnostic__title">Закажите бесплатную экспресс&mdash;диагностику ваших запасов!</div>
 			
 			<div class="get-express-diagnostic__text">
 				
-				<p>Раскройте нереализованный потенциал повышения эффективности в управлении запасами с помощью нашей БЕСПЛАТНОЙ экспресс-диагностики.</p>
+				<p>Раскройте нереализованный потенциал повышения эффективности в управлении запасами с помощью нашей БЕСПЛАТНОЙ экспресс&mdash;диагностики.</p>
 				
 				<p>Узнайте с помощью MODUS Запасы за счет чего можно повысить уровень сервиса для ваших клиентов, и где есть ресурс где есть ресурс для высвобождения денежных средств или достижения целевых показателей по бюджету.</p>
 
@@ -1094,7 +1055,7 @@
 
 		<div class="container">
 		
-			<div class="free-express-diagnostic__title">Как получить бесплатную экспресс-диагностику?</div>
+			<div class="free-express-diagnostic__title">Как получить бесплатную экспресс&mdash;диагностику?</div>
 
 			<ul class="free-express-diagnostic__list d-flex flex-wrap align-items-stretch justify-content-start">
 
@@ -1110,7 +1071,7 @@
 
 				<li class="free-express-diagnostic__list-item">
 					<div class="free-express-diagnostic__list-num">3</div>
-					<div class="free-express-diagnostic__list-text">Пройдите тест-опросник на нашем сайте для повышения качества диагностике.</div>
+					<div class="free-express-diagnostic__list-text">Пройдите тест&mdash;опросник на нашем сайте для повышения качества диагностике.</div>
 				</li>
 
 				<li class="free-express-diagnostic__list-item">

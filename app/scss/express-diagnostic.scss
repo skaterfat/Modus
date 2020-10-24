@@ -1,0 +1,62 @@
+.express-diagnostic {
+
+	&__hero {
+
+		padding: 186px 0 78px;
+		background: radial-gradient(151.2% 260.55% at -10.94% 135.63%, #C4E0FF 0%, #ECF5FF 38.35%, #F7FBFF 83.26%);
+		overflow: hidden;
+
+		& .hero-content {
+
+			flex: 0 0 620px;
+			padding-right: 50px;
+
+			&__title {
+				font-size: 46px;
+				line-height: 56px;
+				margin-bottom: 10px;
+			}
+
+			&__description {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 28px;
+				line-height: 36px;
+				margin-bottom: 29px;
+			}
+
+			&__text {
+
+				font-size: 18px;
+				line-height: 26px;
+				font-weight: 400;
+				color: #8091B5;
+				margin-bottom: 75px;
+
+				& b, & strong {
+					color: $standartcolor;
+				}
+
+			}
+
+		}
+
+		& .hero-picture {
+
+			flex: 1;
+
+			& picture,
+			& img {
+				display: block;
+				/*max-width: 100%;*/
+				max-width: 625px;
+				height: auto;
+				position: relative;
+				right: -20px;
+			}
+
+		}
+
+	}
+
+}

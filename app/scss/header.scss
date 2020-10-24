@@ -203,6 +203,8 @@
 			
 			flex: 1;
 			display: none;
+			position: relative;
+			top: -10px;
 
 			& .search-form__input {
 				width: 100%;
