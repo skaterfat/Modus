@@ -8,13 +8,14 @@
 @import "~owl.carousel/src/scss/owl.theme.default";
 //@import "~perfect-scrollbar/css/perfect-scrollbar.css";
 //@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "~select2/src/scss/core.scss";
 
 //@import "./app/scss/perfect-scrollbar";
 @import "./app/scss/fonts";
 @import "./app/scss/common";
 //@import "./app/scss/breadcrumbs";
 //@import "./app/scss/pagenation";
-//@import "./app/scss/form";
+@import "./app/scss/form";
 @import "./app/scss/header";
 @import "./app/scss/modus-ims";
 @import "./app/scss/cases";

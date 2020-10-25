@@ -4,7 +4,7 @@ import popper from 'popper.js';
 import bootstrap from 'bootstrap';
 import { Tooltip, Toast, Popover } from 'bootstrap';
 //import Inputmask from 'inputmask';
-//require("inputmask/dist/jquery.inputmask.min.js");
+require("inputmask/dist/jquery.inputmask.min.js");
 import 'owl.carousel';
 //require("slick-carousel/slick/slick.min.js");
 //require("@fancyapps/fancybox/dist/jquery.fancybox.min.js");
@@ -14,6 +14,7 @@ require("waypoints/lib/jquery.waypoints.min.js");
 //import PerfectScrollbar from 'perfect-scrollbar';
 //import anime from 'animejs/lib/anime.es.js';
 //const Handlebars = require("handlebars");
+require("select2/dist/js/select2.min.js");
 
 /*global.jQuery = $;
 global.$ = $;*/
@@ -21,6 +22,63 @@ global.$ = $;*/
 (function($) {
 
 	$(document).ready(function() {
+
+		$("input.mask-phone").inputmask({"mask": "+7 (999) 999-9999"});
+		$("input.mask-email").inputmask({
+			mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
+			greedy: false,
+			onBeforePaste: function (pastedValue, opts) {
+				pastedValue = pastedValue.toLowerCase();
+				return pastedValue.replace("mailto:", "");
+			},
+			definitions: {
+				'*': {
+					validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~\-]",
+					casing: "lower"
+				}
+			}
+		});
+
+		if($('.js-select2').length > 0)
+			$('.js-select2').select2({
+				minimumResultsForSearch: -1,
+				placeholder: function(){
+					$(this).data('placeholder');
+				}
+				//width: 'element'
+			});
+
+		$('.step__form-check .form-check-input').on('change', function(event) {
+			event.preventDefault();
+			
+			if($(this).siblings('.form-control').length > 0) {
+
+				if($(this).prop('checked')) {
+					$(this).siblings('.form-control').removeAttr('disabled').focus();
+				}
+
+			}
+
+			var radios = $(this).closest('.step__box-wrap').find('.step__form-check');
+			$(radios).each(function(index, el) {				
+				if($(el).find('.form-control') && !$(el).find('.form-check-input').prop('checked'))
+					$(this).find('.form-control').attr('disabled', true).val("");
+			});
+
+		});
+
+		$('.scale__dot').on('click', function(event) {
+			event.preventDefault();
+			var cbId = $(this).attr('data-radio-id'),
+				left = parseInt(parseFloat($(this).css('left')) / parseFloat($(this).parent().width()) * 100),
+				curIndex = ($(this).index());
+
+			$("#" + cbId).trigger('click');
+			$(this).siblings('.scale__bar').css("width", left + "%");
+			$(this).siblings('.scale__dot').removeClass('--active');
+			$(this).parent().find('.scale__dot:lt('+curIndex+')').addClass('--active');
+
+		});
 
 		$('.header__hamburger').on('click', function(event) {
 			event.preventDefault();
@@ -197,8 +255,6 @@ global.$ = $;*/
 
 
 		});
-
-
 		
 	});
 

@@ -59,4 +59,335 @@
 
 	}
 
+	& .--mb-step-2 {
+		margin-bottom: 128px;
+	}
+
+	& .--mt-step-3 {
+		margin-top: 128px;
+	}
+
+	&__steps {
+
+		padding: 120px 0 96px;
+
+		& .steps {
+
+			&__form {
+
+				& .select2-container {
+					width: 500px !important;
+				}
+
+			}
+
+			&__step {
+
+				& .step {
+
+					&__number {
+
+						margin-bottom: 32px;				
+
+						&-gradient {
+							padding: 2px;							
+							background: #ADC4D8;
+							border-radius: 100%;
+							width: 62px;
+							height: 62px;
+							margin: 0 auto;
+						}
+
+						&-wrap {
+
+							border-radius: 100%;
+							width: 100%;
+							height: 100%;
+
+							& > span {
+
+								display: block;
+								background: $white;
+								border-radius: 100%;
+								text-align: center;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								height: 100%;
+
+								& > span {
+
+									font-size: 19px;
+									line-height: 22px;
+									color: #ADC4D8;
+
+								}
+
+							}
+
+						}
+
+						&.--focus .step__number-gradient {							
+							background: $maingradient;
+						}
+
+						&.--focus .step__number-wrap {
+
+							& > span {
+
+								& > span {
+									background: $maingradient;
+									font-size: 19px;
+									line-height: 22px;
+									color: $white;
+									color: transparent;
+									background-clip: text;
+									text-fill-color: transparent;
+								}
+
+							}
+
+						}
+
+						&.--complete .step__number-gradient {							
+							background: $maingradient;
+						}
+
+						&.--complete .step__number-wrap {
+
+							& > span {
+
+								background: transparent;
+
+								& > span {
+									background: transparent;
+									color: $white;
+								}
+
+							}
+
+						}
+
+					}
+
+					&__title {
+						font-size: 30px;
+						line-height: 35px;
+						font-weight: 600;
+						text-align: center;
+						max-width: 777px;
+						margin: 0 auto 54px;
+					}
+
+					&__description {
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 25px;
+						color: #8091B5;
+						text-align: center;
+						margin-top: 5px;
+						margin-bottom: 72px;
+					}
+
+					&__box {
+
+						margin-bottom: 72px;
+						max-width: 890px;
+						margin: 0 auto 72px;
+
+						&-gradient {
+							padding: 1px;							
+							background: $maingradient;
+							border-radius: 5px;
+						}
+
+						&-wrap {
+							padding: 128px 0 128px;
+							background: $white;
+							border-radius: 5px;
+						}
+
+					}
+
+					&__heading {
+						font-style: normal;
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 25px;
+						color: #8091B5;
+						text-align: center;
+						max-width: 620px;
+						margin: 0 auto 42px;
+
+						& strong,
+						& b {
+							color: $standartcolor;
+							font-weight: 600;
+						}
+
+						&.--scale-mb {
+							margin-bottom: 66px;							
+						}
+
+					}
+
+					&__scale {
+
+						width: 575px;
+						height: 15px;
+						margin: 0 auto;
+						background: rgba(173, 196, 216, 0.25);
+						border-radius: 20px;
+						position: relative;
+
+						& .scale {
+
+							&__bar {
+								position: absolute;
+								z-index: 100;
+								transition: width 0.25s linear;
+								height: 100%;
+								background: $maingradient;
+								border-radius: 20px;
+								width: 0;
+								top: 0;
+								left: 0;
+							}
+
+							&__dot {
+
+								width: 26px;
+								height: 26px;
+								position: absolute;
+								z-index: 110;
+								border: $white solid 5px;
+								border-radius: 100%;
+								background: #b9cdde;
+								top: -5px;
+								transform: translateX(-13px);
+								cursor: pointer;
+
+								&:before {
+									content: attr(data-value);
+									display: inline-block;
+									font-weight: 500;
+									font-size: 16px;
+									line-height: 22px;
+									color: rgba(62, 82, 132, 0.6);
+									position: absolute;
+									left: -42px;
+									top: -35px;
+									white-space: nowrap;
+								}
+
+								&.--active {
+									background: $maingradient;
+								}
+
+								&.--val-1 {
+
+									left: 7%;
+
+									&:before {
+										left: -31px;
+									}
+
+								}
+
+								&.--val-2 {
+									left: 33%;									
+								}
+
+								&.--val-3 {
+									left: 67%;									
+								}
+
+								&.--val-4 {
+
+									left: 100%;
+
+									&:before {
+										left: -58px;
+									}
+
+								}
+
+							}
+
+						}
+
+					}
+
+					&__question {
+						font-style: normal;
+						font-weight: 500;
+						font-size: 18px;
+						line-height: 25px;
+						max-width: 620px;
+						margin: 0 auto 42px;
+
+					}
+
+					&__form-check {
+
+						max-width: 620px;
+						margin: 0 auto 26px;
+
+						& .step__form-input-label {
+
+							margin-top: 16px;
+
+							&.--other {
+								margin-top: 32px;
+							}
+
+						}
+
+						& .step__form-input-label,
+						& .step__form-input-label + .form-control {
+							position: relative;
+							left: -30px;
+						}
+
+					}
+
+					&__form-group {
+
+						margin-bottom: 32px;
+
+						&.--terms {
+							margin-bottom: 0;
+						}
+
+					}
+
+					&__contacts {
+
+						background: #ECF5FF;
+						border-radius: 5px;
+						padding: 64px 48px;
+						max-width: 890px;
+						margin: 0 auto 68px;
+
+						&-left {
+							padding-right: 10px;
+							flex: 0 0 50%;
+						}
+
+						&-right {
+							padding-left: 10px;
+							flex: 0 0 50%;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
 }
