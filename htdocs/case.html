@@ -162,9 +162,19 @@
 
 		<div class="category-menu__wrap">
 
-			<div class="container">
+			<div class="container-fluid container-lg">
 
-				<ul class="category-menu__list d-flex flex-wrap align-content-center justify-content-center">
+				<form class="form category-menu__form d-flex d-md-none flex-wrap align-items-start justify-content-center">
+					<select class="js-select2 category-menu__form-select" name="CATEGORY_MENU">
+						<option selected>О продукте</option>
+						<option>Для кого</option>
+						<option>Кейсы</option>
+						<option>Тарифы</option>
+						<option>Экспресс-аудит</option>
+					</select>
+				</form>
+
+				<ul class="category-menu__list d-none d-md-flex flex-wrap align-content-center justify-content-center">
 					<li class="menu-list__item --title">МОДУС Запасы</li>
 					<li class="menu-list__item">
 						<a href="javascript:;">О продукте</a>

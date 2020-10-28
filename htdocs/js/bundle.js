@@ -169,6 +169,7 @@ global.$ = $;*/
       var cbId = $(this).attr('data-radio-id'),
           left = parseInt(parseFloat($(this).css('left')) / parseFloat($(this).parent().width()) * 100),
           curIndex = $(this).index();
+      if ($(this).parent().find('.scale__dot').length == curIndex) left = 100;
       $("#" + cbId).trigger('click');
       $(this).siblings('.scale__bar').css("width", left + "%");
       $(this).siblings('.scale__dot').removeClass('--active');
@@ -242,8 +243,16 @@ global.$ = $;*/
         loop: true,
         items: 1,
         dots: true,
-        nav: true,
-        navText: ['<div class="owl__nav-left"></div>', '<div class="owl__nav-right"></div>']
+        nav: false,
+        navText: ['<div class="owl__nav-left"></div>', '<div class="owl__nav-right"></div>'],
+        responsive: {
+          0: {
+            nav: false
+          },
+          767.99: {
+            nav: true
+          }
+        }
         /*margin: 17,
         stagePadding: 38,
         stagePadding: 50,
@@ -275,25 +284,31 @@ global.$ = $;*/
         loop: true,
         items: 3,
 
-        /*stagePadding: 40,*/
-        margin: 16,
+        /*stagePadding: 40,
+        margin: 16,*/
 
         /*autoWidth:true,
         margin:30,
         autoHeight:false*/
         dots: true,
-        nav: true,
-        navText: ['<div class="owl__nav-left"></div>', '<div class="owl__nav-right"></div>']
-        /*responsive : {
-        	768 : {
-        		center: true,
-        		loop: true,
-        		items: 3,
-        		nav: true,
-        		navText: ["",""]
-        	}
-        }*/
-
+        nav: false,
+        autoWidth: true,
+        navText: ['<div class="owl__nav-left"></div>', '<div class="owl__nav-right"></div>'],
+        responsive: {
+          0: {
+            items: 1,
+            margin: 20
+          },
+          991.99: {
+            items: 1,
+            margin: 24
+          },
+          1169.99: {
+            items: 3,
+            nav: true,
+            margin: 24
+          }
+        }
       });
     }
 
@@ -313,6 +328,9 @@ global.$ = $;*/
     $('.tabs__nav-right').on('click', function (event) {
       event.preventDefault();
       if ($(this).prev().find('.tabs__list-item.--active').next().length > 0) $(this).prev().find('.tabs__list-item.--active').next().children('a').trigger('click');else $(this).prev().find('.tabs__list-item:first-child > a').trigger('click');
+    });
+    $(window).on('resize', function (event) {
+      $('.owl-carousel.owl-loaded').trigger('refresh.owl.carousel');
     });
   });
 })(jquery__WEBPACK_IMPORTED_MODULE_0___default.a);

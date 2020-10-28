@@ -72,6 +72,18 @@ $input-focus-border-color:              lighten($pink, 25%);
 $custom-select-focus-border-color:  $pink;
 $custom-file-focus-border-color:    $pink;*/
 
+// Set the number of columns and specify the width of the gutters.
+
+/*$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+$gutters: $spacers !default;*/
+
+// Container padding
+
+$container-padding-x: 40px;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 575.99px,

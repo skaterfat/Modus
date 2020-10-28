@@ -148,11 +148,11 @@
 	
 	<section class="express-diagnostic__hero">
 		
-		<div class="express-diagnostic__hero-wrap container flex-wrap flex-lg-nowrap d-flex align-items-center justify-content-start">
+		<div class="express-diagnostic__hero-wrap container flex-wrap flex-lg-nowrap d-flex align-items-start justify-content-start">
 			<div class="hero-content">
 				<h1 class="hero-content__title">Экспресс&mdash;диагностика</h1>
 				<div class="hero-content__description"><strong>бесплатно</strong> покажем, как эффективно управлять вашими запасами</div>
-				<div class="hero-content__text"><strong>Цель экспресс-диагностики</strong> в том, чтобы <strong>наглядно отобразить, как эффективно управлять вашими запасами</strong>  с помощью нашего бизнес&mdash;приложения.</div>
+				<div class="hero-content__text"><strong>Цель экспресс-диагностики</strong> в том, чтобы <strong>наглядно отобразить, как эффективно управлять вашими запасами</strong> с помощью нашего бизнес&mdash;приложения.</div>
 				<div class="hero-content__buttons d-flex flex-column align-items-center justify-content-center d-md-block">
 					<a href="javascript:;" class="btn btn-primary">Начать экспресс&mdash;диагностику</a>
 				</div>
@@ -171,9 +171,19 @@
 
 		<div class="category-menu__wrap">
 
-			<div class="container">
+			<div class="container-fluid container-lg">
 
-				<ul class="category-menu__list d-flex flex-wrap align-content-center justify-content-center">
+				<form class="form category-menu__form d-flex d-md-none flex-wrap align-items-start justify-content-center">
+					<select class="js-select2 category-menu__form-select" name="CATEGORY_MENU">
+						<option selected>О продукте</option>
+						<option>Для кого</option>
+						<option>Кейсы</option>
+						<option>Тарифы</option>
+						<option>Экспресс-аудит</option>
+					</select>
+				</form>
+
+				<ul class="category-menu__list d-none d-md-flex flex-wrap align-content-center justify-content-center">
 					<li class="menu-list__item --title">МОДУС Запасы</li>
 					<li class="menu-list__item">
 						<a href="javascript:;">О продукте</a>
@@ -240,8 +250,8 @@
 									<select class="js-select2" name="DIRECTION" data-placeholder="Выберите направление">
 										<option></option>
 										<option value="1">Дистрибьютеры</option>
-										<option value="2">Направление 2</option>
-										<option value="3">Направление 3</option>
+										<option value="2">Ритейл и e-сommers</option>
+										<option value="3">Промышленность</option>
 									</select>
 								</div>
 
@@ -999,7 +1009,7 @@
 		<section class="demo-access">
 
 		<div class="container">
-			<div class="demo-access__title text-center">Пока мы готовим данные экспресс-диагностики, получите доступ к демо-кабинету и оцени функционал самостоятельно</div>
+			<div class="demo-access__title text-center">Пока мы готовим данные экспресс-диагностики, получите доступ <span class='nobr'>к демо-кабинету</span> и оцени функционал самостоятельно</div>
 			<div class="demo-access__buttons text-center">
 				<a href="javascript:;" class="btn btn-primary">Демо&mdash;кабинет</a>
 			</div>

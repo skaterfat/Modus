@@ -50,9 +50,11 @@
 				display: block;
 				/*max-width: 100%;*/
 				max-width: 625px;
+				max-width: 900px;
 				height: auto;
 				position: relative;
 				right: -20px;
+				/*right: -100px;*/
 			}
 
 		}
@@ -181,8 +183,8 @@
 					}
 
 					&__description {
-						font-weight: 500;
-						font-size: 18px;
+						font-weight: 400;
+						font-size: 16px;
 						line-height: 25px;
 						color: #8091B5;
 						text-align: center;
@@ -305,10 +307,10 @@
 
 								&.--val-4 {
 
-									left: 100%;
+									left: 93%;
 
 									&:before {
-										left: -58px;
+										left: -30px;
 									}
 
 								}

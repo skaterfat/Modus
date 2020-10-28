@@ -4,7 +4,7 @@
 	position: absolute;
 	top: 41px;
 	left: 0;
-	z-index: 110;
+	z-index: 910;
 	width: 100%;
 	
 	&__logo {
@@ -94,7 +94,7 @@
 							& > ul {
 
 								margin: 0;
-								padding: 20px 0 14px;
+								padding: 14px 0;
 								list-style: none;
 								position: relative;
 								background: $white;
@@ -123,11 +123,11 @@
 									& > a {
 
 										display: block;
-										padding: 5px 11px;
+										padding: 5px 18px;
 										font-style: normal;
-										font-weight: 500;
+										font-weight: 400;
 										font-size: 14px;
-										line-height: 16px;
+										line-height: 24px;
 										white-space: nowrap;
 
 										&:hover {
@@ -521,7 +521,7 @@
 		&__hamburger {
 			margin-left: 50px;
 			position: relative;
-			top: -6px;
+			top: -4px;
 		}
 
 		&__phone,
@@ -649,10 +649,16 @@
 --- @media (max-width: 576px) ---
 ***/
 @media (max-width: map-get($grid-breakpoints, "sm")) {
+
 	.header {
 
-		.header__feedback {
+		&__feedback {
 			margin-left: 0px;
+		}
+
+		&__hamburger {
+			margin-left: 10px;
+			top: -3px;
 		}
 
 	}

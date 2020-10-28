@@ -115,8 +115,12 @@
 
 		font-style: normal;
 		font-weight: 500;
-		font-size: 16px;
+		font-size: 14px;
 		line-height: 17px;
+
+		&.--terms {
+			font-weight: 400;
+		}
 
 		& a {
 
@@ -128,6 +132,10 @@
 
 		}
 
+	}
+
+	&-group.--terms .form-check-label {		
+		font-weight: 400;
 	}
 
 	& .textarae-label,
@@ -160,7 +168,8 @@
 
 		&:focus {
 			color: $standartcolor;
-			background: rgba(242, 248, 255, 0.5);
+			/*background: rgba(242, 248, 255, 0.5);*/
+			background: $white;
 			border: 1px solid #3696FF;
 			box-shadow: none;
 		}
@@ -218,12 +227,14 @@
 	& .select2-container .select2-selection--single .select2-selection__rendered {
 		display: block;
 		padding: 12px 15px;
+		outline: none;
 	}
 
 	& .select2-container--default .select2-selection--single {
 		background: $white;
 		border: 1px solid rgba(173, 196, 216, 0.4);
 		border-radius: 4px;
+		outline: none;
 	}
 
 	& .select2-container .select2-selection--single {
@@ -241,12 +252,14 @@
 		width: 10px;
 		height: 6px;
 		background: url('../img/sprite/select2-arrow-down.svg') 0 0 no-repeat;
+		transform: rotate(180deg);
 		position: absolute;
 		top: 22px;
 		right: 16px;
 	}
 
 	& .select2-container--default.select2-container--open.select2-container--below .select2-selection__arrow {
+		transform: rotate(0deg);
 		background: url('../img/sprite/select2-arrow-down-hover.svg') 0 0 no-repeat;
 	}
 
@@ -264,6 +277,10 @@
 		width: 0;*/
 	}
 
+}
+
+.select2-container {
+	min-width: 320px;
 }
 
 .select2-dropdown {
@@ -287,6 +304,11 @@
 .select2-container--default .select2-results__option[aria-selected="true"] {
 	background-color: transparent;
 }
+
+.select2-container--default .select2-results > .select2-results__options {
+	max-height: 500px;
+}
+
 
 .select2-results__option {
 	padding: 12px 15px;
@@ -312,4 +334,28 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 24px;
+}
+
+/***
+--- @media (max-width: 576px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "sm")) {
+
+	.form .select2-container .select2-selection--single .select2-selection__rendered {
+		padding: 2px 10px;
+	}
+
+	.form .select2-container--default .select2-selection--single .select2-selection__arrow {
+		top: 13px;
+		right: 11px;
+	}
+
+	.select2-results__option {
+		padding: 2px 10px;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
 }
