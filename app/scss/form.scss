@@ -341,6 +341,27 @@
 ***/
 @media (max-width: map-get($grid-breakpoints, "sm")) {
 
+	.form {
+
+		&-group.--terms {
+			margin: 24px auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+
+			& .form-check-input {
+				flex: 0 0 20px;
+			}
+
+			& label {
+				flex: 0 0 188px;
+				padding-left: 8px;
+			}
+
+		}
+
+	}
+
 	.form .select2-container .select2-selection--single .select2-selection__rendered {
 		padding: 2px 10px;
 	}

@@ -227,7 +227,7 @@ global.$ = $;*/
 					1169.99 : {
 						items: 3,
 						nav: true,
-						margin: 24,
+						margin: 16
 					}
 				}
 			});
