@@ -147,6 +147,11 @@ module.exports = {
 			template: './app/case.html',
 			minify: false
 		}),
+		new HtmlWebpackPlugin({
+    		filename: 'case-2.html',
+			template: './app/case-2.html',
+			minify: false
+		}),
 		new SpritePlugin({
 			filename: 'sprite.svg',
 			publicPath: './htdocs/'

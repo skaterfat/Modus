@@ -17580,7 +17580,8 @@ body.body--popup-show {
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 72px;
-    max-width: 70%; }
+    max-width: 70%;
+    max-width: 80%; }
   .case__stage .stage__heading {
     font-style: normal;
     font-weight: bold;

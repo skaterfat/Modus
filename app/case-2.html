@@ -1,0 +1,148 @@
+<% var data = {
+	lang:	"ru",
+	title:	"Кейс",
+	description:	"Кейс",
+	og_url:	"",
+	og_type:	"website",
+	og_image:	"og.png",
+	pageClass: "case-page"
+}; %>
+<%= _.template(require('./_include/header.html'))(data) %>
+
+<div class="case">
+	
+	<section class="case__hero">
+		
+		<div class="case__hero-wrap container flex-wrap flex-lg-nowrap d-flex align-items-start justify-content-start">
+			<div class="hero-content">
+				<h1 class="hero-content__title">Внедрение приложения для ПродСоюзАгро</h1>
+				<div class="hero-content__text">крупного российского дистрибьютора продуктов питания</div>
+			</div>
+		</div>
+
+	</section>
+
+	<%= _.template(require('./_include/category-menu.html'), {variable: 'categoryMenu'})({active: "Кейсы"}) %>
+
+	<section class="case__info">
+
+		<div class="container">			
+
+			<div class="case__data d-flex flex-wrap align-items-center justify-content-center">
+				<div class="case-data__item --clients">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">клиенты</div>
+						<div class="case-data__text">Metro, X5, Гуливер, Победа</div>						
+					</div>
+				</div>
+				<div class="case-data__item --economy">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">cокращение запасов за 4 месяца</div>
+						<div class="case-data__text">20-25% (12 млн. <span class="rouble">&#8381;</span>)</div>					
+					</div>
+				</div>
+				<div class="case-data__item --location">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">география</div>
+						<div class="case-data__text --flag --ru">Ульяновск, Россия</div>					
+						<div class="case-data__website">prodsouz.ru</div>					
+					</div>
+				</div>
+				<div class="case-data__item --timing">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">срок реализации проекта</div>
+						<div class="case-data__text">1 месяц</div>					
+					</div>
+				</div>
+				<div class="case-data__item --trade">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">оборот</div>
+						<div class="case-data__text">?</div>					
+					</div>
+				</div>
+				<div class="case-data__item --payback">
+					<div class="case-data__item__wrap">
+						<div class="case-data__name">срок окупаемости проекта</div>
+						<div class="case-data__text">4-5 месяцев</div>					
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="case__stage">
+
+		<div class="stage__picture d-none d-lg-block">
+			<picture>
+				<source srcset="/images/cases/case-3@1x.webp 1x, /images/cases/case-3@2x.webp 2x" type="image/webp">
+				<source srcset="/images/cases/case-3@1x.png 1x, /images/cases/case-3@2x.png 2x">
+				<img src="/images/cases/case-3@1x.png" alt="" title="">
+			</picture>	
+		</div>
+
+		<div class="container-sm px-0 d-flex flex-wrap align-items-center justify-content-start">
+
+			<div class="stage__left">
+
+				<div class="stage__title">Пример внедрения</div>
+
+				<div class="stage__description">Российский дистрибьютор продуктов питания<br><br><br><br></div>
+
+				<div class="stage__heading">Ситуация:</div>
+
+				<div class="stage__text">
+
+					<p>Крупный российский <strong>региональный производитель и</strong> дистрибьютор продуктов питания <strong>(Ульяновская область).</strong></p>
+
+					<p>Номенклатура &mdash; <strong>более 3 500</strong> продуктовых <strong>наименований.</strong></p>
+
+					<p><strong>Более 50 млн. <span class="rouble">&#8381;</span> запасов</strong> на основном складе.</p>
+
+				</div>
+
+			</div>
+
+			<div class="stage__right d-lg-none">
+
+				<div class="stage__picture">
+					<picture>
+						<source srcset="/images/cases/case-3@1x.webp 1x, /images/cases/case-3@2x.webp 2x" type="image/webp">
+						<source srcset="/images/cases/case-3@1x.png 1x, /images/cases/case-3@2x.png 2x">
+						<img src="/images/cases/case-3@1x.png" alt="" title="">
+					</picture>	
+				</div>
+
+			</div>
+
+		</div>		
+
+	</section>
+
+	<section class="case__solution --first">
+
+		<div class="container">
+
+			<div class="solution__title">Решение от<br>МОДУС Запасы</div>
+
+			<ul class="solution__list --mini list-type-1">
+				<li class="solution__list-item list-type-1__item"><strong>Выгрузка, обработка и загрузка данных через API (1С).</strong></li>
+				<li class="solution__list-item list-type-1__item"><strong>Разработка системы показателей по управлению запасами</strong> (более 10 показателей).</li>
+				<li class="solution__list-item list-type-1__item"><strong>Сегментация запасов и оценка уровня комплексности (ABC-XYZ).</strong></li>
+				<li class="solution__list-item list-type-1__item"><strong>Разработка математического алгоритма расчета целевых значений запасов, до уровня компонента</strong> (с использованием более чем 15 уникальных параметров компонентов).</li>
+				<li class="solution__list-item list-type-1__item"><strong>Расчет потенциала сокращения запасов, включая причины возникновения избытков запасов</strong> (минимальный объем партии, длительные сроки поставки, волатильность спроса, маркетинговые активности и т.д.)</li>
+				<li class="solution__list-item list-type-1__item"><strong>Разработка бизнес-приложения для контроля эффективности управления запасами и отслеживания результатов программы.</strong></li>
+			</ul>		
+
+		</div>		
+
+	</section>
+
+
+	<%= _.template(require('./_include/demo-form.html'), {variable: 'demoFormConfig'})({id: "1"}) %>
+
+</div>
+
+
+<%= _.template(require('./_include/footer.html'))(data) %>
