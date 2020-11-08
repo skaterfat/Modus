@@ -3,7 +3,13 @@
 	<div class="container d-lg-flex flex-lg-wrap align-items-lg-center justify-content-lg-center">
 		
 		<div class="presentation-download__picture">
+
 			<picture>
+				<% if(presentationDownloadConfig.screen !== 'undefined') { %>
+				<div class="presentation-download__picture-screen">
+					<img src="<%=presentationDownloadConfig.screen%>.svg" alt="" title="">
+				</div>
+				<% } %>
 				<source srcset="<%=presentationDownloadConfig.image%>@1x.webp 1x, <%=presentationDownloadConfig.image%>@2x.webp 2x" type="image/webp">
 				<source srcset="<%=presentationDownloadConfig.image%>@1x.png 1x, <%=presentationDownloadConfig.image%>@2x.png 2x">
 				<img src="<%=presentationDownloadConfig.image%>@1x.png" alt="" title="">

@@ -835,12 +835,12 @@
 				}
 
 				&-left:not(.--picture) {
-					padding-right: 32px;
+					padding-right: 56px;
 					/*max-width: 460px;*/
 				}
 
 				&-right:not(.--picture) {
-					padding-left: 32px;
+					padding-left: 56px;
 					/*max-width: 460px;*/
 				}
 
@@ -879,7 +879,7 @@
 				& picture,
 				& img {
 					display: inline-block;
-					/*max-width: 100%;*/
+					max-width: 100%;
 				}
 
 			}
@@ -982,7 +982,7 @@
 				& picture,
 				& img {
 					display: inline-block;
-					/*max-width: 100%;*/
+					max-width: 100%;
 				}
 
 			}
@@ -1428,7 +1428,13 @@
 
 				&__item {
 
-					padding-left: 120px; 
+					padding-left: 120px;
+
+					&-wrap {
+						height: 146px;
+						overflow: hidden;
+						margin-bottom: 56px;
+					}
 
 					&-title {
 						font-style: normal;
@@ -1445,8 +1451,7 @@
 						line-height: 26px;
 						font-weight: 500;
 						max-width: 800px;
-						/*margin: 0 auto 56px;*/
-						margin-bottom: 56px;	
+						/*margin: 0 auto 56px;*/	
 					}
 
 					&-info {
@@ -1901,6 +1906,7 @@
 				font-size: 48px;
 				line-height: 58px;
 				margin-bottom: 80px;
+				margin-left: 128px;
 			}
 
 			&__list {
@@ -3136,6 +3142,16 @@
 
 						padding-left: 90px; 
 
+						&-wrap {
+							height: auto;
+							overflow: visible;
+							margin-bottom: 0px;
+						}
+
+						&-desc {
+							margin-bottom: 56px;
+						}
+
 						&-info {
 
 							margin-bottom: 80px;
@@ -3220,6 +3236,10 @@
 		&__tariffs {
 
 			& .tariffs {
+
+				&__title {
+					margin-left: 0;
+				}
 
 				&__list {
 

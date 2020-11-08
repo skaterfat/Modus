@@ -277,6 +277,113 @@ global.$ = $;*/
 		$(window).on('resize', function(event) {
 			$('.owl-carousel.owl-loaded').trigger('refresh.owl.carousel');				
 		});
+
+		$('*[data-modal]').on('click', function(event) {
+			event.preventDefault();
+			var modalName = $(this).data('modal');
+			$('html').addClass('overflow-hidden');
+			$('body').addClass('body--popup-show');
+			$('.popup--' + modalName).addClass('--active');
+		});
+
+		$('.popup__close, .popup__btn.--close').on('click', function(event) {
+			event.preventDefault();
+			$(this).closest('.popup').removeClass('--active');
+			$('html').removeClass('overflow-hidden');
+			$('body').removeClass('body--popup-show');
+		});
+
+		$('#open-welcome').on('click', function(event) {
+			/*event.preventDefault();
+			var modalName = $(this).data('modal-popup');
+			$('.popup--' + modalName).addClass('popup--active');
+			//alert($(window).scrollTop());
+			$('body').addClass('show-popup');*/
+		});
+
+		$('.popup__close-circle, .popup__btn-close').on('click', function(event) {
+			/*event.preventDefault();
+
+			$(this).closest('.popup').removeClass('popup--active');
+			$('body').removeClass('show-popup');
+
+			if($(this).closest('.popup').hasClass('popup--welcome'))
+				setCookie('WELCOME_POPUP', 1, {expires: 86400 * 30 * 365 * 2, path: '/'});*/
+		});
+
+		$('.popup--mini form input.form-control').on('focus change input', function(event) {
+			
+			/*var inputIndex = parseInt($(this).parent().index()),
+				progress = $(this).closest('.popup').find('.popup__progress');*/
+
+			var inputIndex = parseInt($(this).parent().index()),
+				progress = $(this).closest('.popup').find('.popup__progress');
+
+			progress.find('.progress-dot:eq('+inputIndex+')').addClass('--active');
+			validateMiniFormProgressBar();
+
+
+		}).on('blur', function(event) {
+
+			var inputIndex = parseInt($(this).parent().index()),
+				progress = $(this).closest('.popup').find('.popup__progress'),
+				thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
+
+			thisProgressDot.removeClass('--active');
+			validateMiniFormProgressBar();
+
+			/*var inputIndex = parseInt($(this).parent().index()),
+				progress = $(this).closest('.popup').find('.popup__progress'),
+				thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
+
+			if($(this).val().length == 0) {
+				thisProgressDot.removeClass('--complete');
+			}
+			else {
+				thisProgressDot.addClass('--complete');
+			}
+
+			thisProgressDot.removeClass('--active');
+
+			var lastCompleteDot = progress.find('.progress-dot.--complete:last'),
+				left = lastCompleteDot.length > 0 ? parseInt(parseFloat(lastCompleteDot.css('left')) / parseFloat(progress.width()) * 100) : 0;
+
+			progress.children('.progress-bar').css('width', left + "%");*/
+
+
+		});
+
+		function validateMiniFormProgressBar() {
+
+			var progress = $('.popup--mini').find('.popup__progress');
+
+			$('.popup--mini form input.form-control').each(function(index, input) {
+
+				console.log($(input).is(":focus"));
+
+				var inputIndex = parseInt($(input).parent().index()),
+					thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
+
+				//alert(inputIndex)
+
+				if(!$(input).is(":focus"))
+					thisProgressDot.removeClass('--active');
+				
+				if($(input).val().length == 0) {
+					thisProgressDot.removeClass('--complete');
+				}
+				else {
+					thisProgressDot.addClass('--complete');
+				}
+
+			});
+
+			var lastCompleteDot = progress.find('.progress-dot.--complete:last'),
+				left = lastCompleteDot.length > 0 ? parseInt(parseFloat(lastCompleteDot.css('left')) / parseFloat(progress.width()) * 100) : 0;
+
+			progress.children('.progress-bar').css('width', left + "%");
+
+		}
 		
 	});
 
