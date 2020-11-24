@@ -166,40 +166,40 @@
 
 				<form class="form category-menu__form d-flex d-md-none flex-wrap align-items-start justify-content-center">
 					<select class="js-select2 category-menu__form-select" name="CATEGORY_MENU">
-						<option selected>О продукте</option>
-						<option>Для кого</option>
-						<option>Кейсы</option>
-						<option>Тарифы</option>
-						<option>Экспресс-аудит</option>
+						<option selected value="#about">О продукте</option>
+						<option value="#for-whom">Для кого</option>
+						<option value="#cases">Кейсы</option>
+						<option value="#tariffs">Тарифы</option>
+						<option value="/express-diagnostic.html">Экспресс-аудит</option>
 					</select>
 				</form>
 
 				<ul class="category-menu__list d-none d-md-flex flex-wrap align-content-center justify-content-center">
 					<li class="menu-list__item --title">МОДУС Запасы</li>
 					<li class="menu-list__item">
-						<a href="javascript:;">О продукте</a>
+						<a href="#about">О продукте</a>
 					</li>
 					<li class="menu-list__item">
-						<a href="javascript:;">Для кого</a>
+						<a href="#for-whom">Для кого</a>
 					</li>
 					<li class="menu-list__item --dropdown --active">
-						<a href="javascript:;">Кейсы</a>
+						<a href="#cases">Кейсы</a>
 						<div>
 							<ul>
 								<li>
-									<a href="javascript:;">Производитель автозапчастей</a>
+									<a href="/case.html">Производитель автозапчастей</a>
 								</li>
 								<li>
-									<a href="javascript:;">Дистрибьютер продуктов питания</a>
+									<a href="/case-2.html">Дистрибьютер продуктов питания</a>
 								</li>
 							</ul>
 						</div>
 					</li>
 					<li class="menu-list__item">
-						<a href="javascript:;">Тарифы</a>
+						<a href="#tariffs">Тарифы</a>
 					</li>
 					<li class="menu-list__item">
-						<a href="javascript:;">Экспресс-аудит</a>
+						<a href="/express-diagnostic.html">Экспресс-аудит</a>
 					</li>
 				</ul>
 
@@ -500,23 +500,23 @@
 							<form class="form popup__form">
 
 								<div class="form-group popup__form-group --mb-20">
-									<label class="form-check-label" for="name">Имя</label>
-									<input type="text" name="NAME" class="form-control">
+									<label class="form-label" for="name">Имя</label>
+									<input type="text" name="NAME" class="form-control" placeholder="Имя">
 								</div>
 
 								<div class="form-group popup__form-group --mb-20">
-									<label class="form-check-label" for="name">Почта</label>
-									<input type="email" name="EMAIL" class="form-control">
+									<label class="form-label" for="name">Почта</label>
+									<input type="email" name="EMAIL" class="form-control" placeholder="Почта">
 								</div>
 
 								<div class="form-group popup__form-group --mb-20">
-									<label class="form-check-label" for="name">Телефон</label>
-									<input type="tel" name="PHONE" class="form-control mask-phone">
+									<label class="form-label" for="name">Телефон</label>
+									<input type="tel" name="PHONE" class="form-control mask-phone" placeholder="Телефон">
 								</div>
 
 								<div class="form-group popup__form-group --mb-35">
-									<label class="form-check-label" for="name">Компания</label>
-									<input type="text" name="COMPANY" class="form-control">
+									<label class="form-label" for="name">Компания</label>
+									<input type="text" name="COMPANY" class="form-control" placeholder="Компания">
 								</div>
 
 								<div class="form-group --terms --mb-35">

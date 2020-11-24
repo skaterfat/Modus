@@ -212,6 +212,31 @@ body.body--popup-show {
 			max-width: 400px;
 			margin: 0 auto;
 
+			& .form-label {
+				margin-bottom: 0;
+			}
+
+			& input[type="text"]::placeholder,
+			& input[type="tel"]::placeholder,
+			& input[type="email"]::placeholder,
+			& textarea::placeholder {
+				opacity: 0;
+			}
+
+			& input[type="text"]:-ms-input-placeholder,
+			& input[type="tel"]:-ms-input-placeholder,
+			& input[type="email"]:-ms-input-placeholder,
+			& textarea:-ms-input-placeholder {
+				opacity: 0;
+			}
+
+			& input[type="text"]::-ms-input-placeholder,
+			& input[type="tel"]::-ms-input-placeholder,
+			& input[type="email"]::-ms-input-placeholder,
+			& textarea::-ms-input-placeholder {
+				opacity: 0;
+			}
+
 		}
 
 		&__title {
@@ -295,6 +320,9 @@ body.body--popup-show {
 	}
 
 	& .popup--mini {
+
+		overflow-y: scroll;
+		min-height: auto;
 		
 		/*& .popup__container {
 			flex: 0 0 1400px;
@@ -354,6 +382,52 @@ body.body--popup-show {
 }
 
 
+
+/***
+--- @media (max-width: 1440px) ---
+***/
+@media (max-width: map-get($grid-breakpoints, "xxl")) {
+
+	.popups {
+
+		& .popup {
+
+
+
+			&__form {
+
+				& input[type="text"]::placeholder,
+				& input[type="tel"]::placeholder,
+				& input[type="email"]::placeholder,
+				& textarea::placeholder {
+					opacity: 1;
+				}
+
+				& input[type="text"]:-ms-input-placeholder,
+				& input[type="tel"]:-ms-input-placeholder,
+				& input[type="email"]:-ms-input-placeholder,
+				& textarea:-ms-input-placeholder {
+					opacity: 1;
+				}
+
+				& input[type="text"]::-ms-input-placeholder,
+				& input[type="tel"]::-ms-input-placeholder,
+				& input[type="email"]::-ms-input-placeholder,
+				& textarea::-ms-input-placeholder {
+					opacity: 1;
+				}
+
+				& .form-label {
+					display: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}
 
 /***
 --- @media (max-width: 578px) ---

@@ -7,7 +7,7 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
 require("inputmask/dist/jquery.inputmask.min.js");
 import 'owl.carousel';
 //require("slick-carousel/slick/slick.min.js");
-//require("@fancyapps/fancybox/dist/jquery.fancybox.min.js");
+require("@fancyapps/fancybox/dist/jquery.fancybox.min.js");
 require("waypoints/lib/jquery.waypoints.min.js");
 //import { CountUp } from 'countup.js';
 //require("./app/js/dist/jquery.countup.js");
@@ -46,6 +46,30 @@ global.$ = $;*/
 					$(this).data('placeholder');
 				}
 				//width: 'element'
+			});
+
+		if($('a.fancybox-interface').length > 0)
+			$('a.fancybox-interface').fancybox({
+				buttons: ["close"],
+				animationEffect: false,
+				afterLoad: function(instance, current) {	
+
+					if(instance.$trigger.find('img[src$=".svg"]').length > 0) {
+						var $imgScreen = instance.$trigger.find('img[src$=".svg"]').clone();
+						$('<div class="fancybox-content__screen"/>').append($imgScreen).appendTo(instance.$refs.inner.find('.fancybox-content'));
+					}				
+
+					/*var pixelRatio = window.devicePixelRatio || 1;
+
+					if ( pixelRatio > 1.5 ) {
+						current.width  = current.width  / pixelRatio;
+						current.height = current.height / pixelRatio;
+					}*/
+
+					current.width  = current.width  / 2;
+					current.height = current.height / 2;
+
+				},
 			});
 
 		$('.step__form-check .form-check-input').on('change', function(event) {
@@ -128,7 +152,72 @@ global.$ = $;*/
 			else sticky.removeClass('--sticky');
 
 
-		});
+		}).on('resize', function(event) {
+			stickyOffset = $('.category-menu').offset().top;				
+		});		
+
+		if($(".category-menu__form-select").length > 0) {
+
+			$('.category-menu__form-select').on('change', function(event, isScroll) {
+
+				if(isScroll)
+					return false;
+
+				var href = $(this).val();
+
+				if(href.indexOf('#') == 0 && $(href).length > 0) {
+					$(".category-menu .category-menu__list .menu-list__item a[href^='"+href+"']").trigger('click', [true]);
+				}
+				else
+					window.location.href = href;
+			});
+
+		}
+
+		if($(".category-menu .category-menu__list .menu-list__item a[href^='#']").length > 0) {
+
+			var menuItems = $(".category-menu .category-menu__list .menu-list__item a[href^='#']");
+
+			menuItems.on('click', function(event, select2) {
+
+				event.preventDefault();
+
+				var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top;
+
+				$('html, body').stop().animate({ 
+					scrollTop: offsetTop - $('.category-menu').height()
+				}, 500);
+
+				if(!select2) {
+					$('.category-menu__form-select').val(href);
+					$('.category-menu__form-select').trigger('change');
+				}
+
+			});
+
+			$(window).on('scroll', function() {
+
+				var scrollPos = $(document).scrollTop();
+
+				menuItems.each(function(index, item) {
+
+					var href = $(item).attr("href");
+
+					if($(href).position().top <= (scrollPos + 0)) {
+						$(".category-menu .category-menu__list .menu-list__item").removeClass("--active");
+						$(item).parent().addClass("--active");
+						$('.category-menu__form-select').val(href);
+						$('.category-menu__form-select').trigger('change', [true]);
+					}
+					else
+						$(item).parent().removeClass("--active");
+
+				});
+								  
+			});
+
+		}
 
 		$('.turnover-list__item-title').waypoint({
 			handler: function(direction) {
@@ -353,13 +442,20 @@ global.$ = $;*/
 
 		});
 
+		$(document).on('mouseup', function(event) {
+			event.preventDefault();
+			if($('body').hasClass('body--popup-show')) {
+				var container = $(".popup.--active .popup__gradient");
+				if (!container.is(event.target) && container.has(event.target).length === 0)
+					container.find('.popup__close').trigger('click');
+			}	
+		});
+
 		function validateMiniFormProgressBar() {
 
 			var progress = $('.popup--mini').find('.popup__progress');
 
 			$('.popup--mini form input.form-control').each(function(index, input) {
-
-				console.log($(input).is(":focus"));
 
 				var inputIndex = parseInt($(input).parent().index()),
 					thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');

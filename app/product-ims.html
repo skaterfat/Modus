@@ -24,11 +24,16 @@
 				</div>
 			</div>
 			<div class="hero-picture d-flex align-items-center justify-content-end">
-				<picture>
-					<source srcset="/images/modus/ims/hero@1x.webp 1x, /images/modus/ims/hero@2x.webp 2x" type="image/webp">
-					<source srcset="/images/modus/ims/hero@1x.png 1x, /images/modus/ims/hero@2x.png 2x">
-					<img src="/images/modus/ims/hero@1x.png" alt="" title="">
-				</picture>
+				<a href="/images/modus/ims/hero@4x.png" class="fancybox-interface">
+					<picture>
+						<div class="hero-picture__screen">
+							<img src="/images/modus/ims/hero-screen.svg" alt="" title="">
+						</div>
+						<source srcset="/images/modus/ims/hero@1x.webp 1x, /images/modus/ims/hero@2x.webp 2x" type="image/webp">
+						<source srcset="/images/modus/ims/hero@1x.png 1x, /images/modus/ims/hero@2x.png 2x">
+						<img src="/images/modus/ims/hero@1x.png" alt="" title="">
+					</picture>
+				</a>
 			</div>
 		</div>
 
@@ -36,7 +41,7 @@
 
 	<%= _.template(require('./_include/category-menu.html'), {variable: 'categoryMenu'})({active: ""}) %>
 
-	<section class="modus-ims__about container d-flex flex-wrap align-items-end justify-content-center">
+	<section class="modus-ims__about container d-flex flex-wrap align-items-end justify-content-center" id="about">
 
 		<div class="modus-ims__about-left">
 			<div class="modus-ims__about-title">МОДУС Запасы</div>
@@ -218,11 +223,16 @@
 
 				<div class="how-it-works__before-right">
 					<div class="how-it-works__before-picture">
-						<picture>
-							<source srcset="/images/modus/ims/hiw-before@1x.webp 1x, /images/modus/ims/hiw-before@2x.webp 2x" type="image/webp">
-							<source srcset="/images/modus/ims/hiw-before@1x.png 1x, /images/modus/ims/hiw-before@2x.png 2x">
-							<img src="/images/modus/ims/hiw-before@1x.png" alt="" title="">
-						</picture>						
+						<a href="/images/modus/ims/hiw@4x.png" class="fancybox-interface">
+							<picture>
+								<!-- <div class="how-it-works__screen">
+									<img src="/images/modus/ims/hiw-after-screen.svg" alt="" title="">
+								</div> -->
+								<source srcset="/images/modus/ims/hiw@1x.webp 1x, /images/modus/ims/hiw@2x.webp 2x" type="image/webp">
+								<source srcset="/images/modus/ims/hiw@1х.png 1x, /images/modus/ims/hiw@2x.png 2x">
+								<img src="/images/modus/ims/hiw@1x.png" alt="" title="">
+							</picture>
+						</a>					
 					</div>
 				</div>
 
@@ -232,11 +242,16 @@
 
 				<div class="how-it-works__after-left">
 					<div class="how-it-works__after-picture">
-						<picture>
-							<source srcset="/images/modus/ims/hiw-after@1x.webp 1x, /images/modus/ims/hiw-after@2x.webp 2x" type="image/webp">
-							<source srcset="/images/modus/ims/hiw-after@1x.png 1x, /images/modus/ims/hiw-after@2x.png 2x">
-							<img src="/images/modus/ims/hiw-after@1x.png" alt="" title="">
-						</picture>						
+						<a href="/images/modus/ims/hiw@4x.png" class="fancybox-interface">
+							<picture>
+								<div class="how-it-works__screen">
+									<img src="/images/modus/ims/hiw-after-screen.svg" alt="" title="">
+								</div>
+								<source srcset="/images/modus/ims/hiw@1x.webp 1x, /images/modus/ims/hiw@2x.webp 2x" type="image/webp">
+								<source srcset="/images/modus/ims/hiw@1x.png 1x, /images/modus/ims/hiw@2x.png 2x">
+								<img src="/images/modus/ims/hiw@1x.png" alt="" title="">
+							</picture>
+						</a>					
 					</div>
 				</div>
 				
@@ -466,7 +481,7 @@
 
 	<%= _.template(require('./_include/demo-access.html'), {variable: 'demoAccess'})({text: "Получите доступ к демо-кабинету и оцените функционал самостоятельно"}) %>
 
-	<section class="modus-ims__for-whom">
+	<section class="modus-ims__for-whom" id="for-whom">
 
 		<div class="container">
 
@@ -704,7 +719,7 @@
 
 	<%= _.template(require('./_include/demo-form.html'), {variable: 'demoFormConfig'})({id: "2"}) %>
 
-	<section class="modus-ims__cases">
+	<section class="modus-ims__cases" id="cases">
 		
 		<div class="container">
 			
@@ -946,7 +961,7 @@
 
 	<%= _.template(require('./_include/demo-form.html'), {variable: 'demoFormConfig'})({id: "3"}) %>
 
-	<section class="modus-ims__tariffs">
+	<section class="modus-ims__tariffs" id="tariffs">
 
 		<div class="container">
 		
