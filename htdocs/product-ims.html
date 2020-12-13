@@ -396,7 +396,7 @@
 						<span>Как выглядит бесплатная диагностика?</span>
 					</span>
 				</a> -->
-				<a href="javascript:;" class="btn btn-secondary">Как выглядит бесплатная диагностика?</a>
+				<a href="#block-express-diagnostic-steps" class="btn btn-secondary smooth-scroll">Как выглядит бесплатная диагностика?</a>
 			</div>
 
 
@@ -437,6 +437,7 @@
 					</div>
 					<div class="form-group --submit">
 						<button type="submit" class="btn btn-primary">Отправить</button>
+						<div class="btn btn-success d-none">Отправлено</div>
 					</div>
 				</form>
 			</div>
@@ -475,9 +476,9 @@
 					<div class="how-it-works__before-picture">
 						<a href="/images/modus/ims/hiw@4x.png" class="fancybox-interface">
 							<picture>
-								<!-- <div class="how-it-works__screen">
-									<img src="/images/modus/ims/hiw-after-screen.svg" alt="" title="">
-								</div> -->
+								<div class="how-it-works__screen">
+									<img src="/images/modus/ims/hiw-before-screen.svg" alt="" title="">
+								</div>
 								<source srcset="/images/modus/ims/hiw@1x.webp 1x, /images/modus/ims/hiw@2x.webp 2x" type="image/webp">
 								<source srcset="/images/modus/ims/hiw@1х.png 1x, /images/modus/ims/hiw@2x.png 2x">
 								<img src="/images/modus/ims/hiw@1x.png" alt="" title="">
@@ -995,7 +996,7 @@
 						<span>Как выглядит бесплатная диагностика?</span>
 					</span>
 				</a> -->
-				<a href="javascript:;" class="btn btn-secondary">Как выглядит бесплатная диагностика?</a>
+				<a href="#block-express-diagnostic-steps" class="btn btn-secondary smooth-scroll">Как выглядит бесплатная диагностика?</a>
 			</div>
 
 
@@ -1036,6 +1037,7 @@
 					</div>
 					<div class="form-group --submit">
 						<button type="submit" class="btn btn-primary">Отправить</button>
+						<div class="btn btn-success d-none">Отправлено</div>
 					</div>
 				</form>
 			</div>
@@ -1355,6 +1357,7 @@
 					</div>
 					<div class="form-group --submit">
 						<button type="submit" class="btn btn-primary">Отправить</button>
+						<div class="btn btn-success d-none">Отправлено</div>
 					</div>
 				</form>
 			</div>
@@ -1540,7 +1543,7 @@
 		
 	</section>
 
-	<section class="modus-ims__free-express-diagnostic">
+	<section class="modus-ims__free-express-diagnostic" id="block-express-diagnostic-steps">
 
 		<div class="container">
 		
@@ -1765,6 +1768,7 @@
 					</div>
 					<div class="form-group --submit">
 						<button type="submit" class="btn btn-primary">Отправить</button>
+						<div class="btn btn-success d-none">Отправлено</div>
 					</div>
 				</form>
 			</div>
@@ -1906,19 +1910,22 @@
 							<div class="popup__desc text-center">Я расскажу Вам всё о сертификации и отвечу на все вопросы. Это бесплатно и ни к чему не обязывает</div> -->
 							<form class="form popup__form">
 
-								<div class="form-group popup__form-group --mb-20">
+								<div class="form-group popup__form-group --mb-20 error">
 									<label class="form-label" for="name">Имя</label>
 									<input type="text" name="NAME" class="form-control" placeholder="Имя">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
-								<div class="form-group popup__form-group --mb-20">
+								<div class="form-group popup__form-group --mb-20 valid">
 									<label class="form-label" for="name">Почта</label>
 									<input type="email" name="EMAIL" class="form-control" placeholder="Почта">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
 								<div class="form-group popup__form-group --mb-20">
 									<label class="form-label" for="name">Телефон</label>
 									<input type="tel" name="PHONE" class="form-control mask-phone" placeholder="Телефон">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
 								<div class="form-group popup__form-group --mb-35">
@@ -1933,6 +1940,7 @@
 
 								<div class="form-group popup__submit text-center">
 									<button type="submit" class="btn btn-primary">Отправить</button>
+									<div class="btn btn-success d-none">Отправлено</div>
 								</div>
 
 							</form>

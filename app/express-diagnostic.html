@@ -35,7 +35,7 @@
 
 	<section class="express-diagnostic__steps">
 		
-		<form class="form steps__form">
+		<form name="FORM_MODUS_IMS_EXPRESS_DIAGNOSTIC" class="form steps__form">
 			
 			<div class="container">
 				
@@ -67,6 +67,7 @@
 										<option value="1">Дистрибьютеры</option>
 										<option value="2">Ритейл и e-сommers</option>
 										<option value="3">Промышленность</option>
+										<option value="4">Другое</option>
 									</select>
 								</div>
 
@@ -80,7 +81,7 @@
 				
 				<div class="steps__step --mb-step-2">
 					
-					<div class="step__number --focus">
+					<div class="step__number">
 						<div class="step__number-gradient">
 							<div class="step__number-wrap">
 								<span>
@@ -128,621 +129,617 @@
 
 			<%= _.template(require('./_include/contact-block.html'), {variable: 'contactBlockText'})({text: "В случае возникновения вопросов по формату данных, вы можете связаться с нами в любое удобное для вас время"}) %>
 
-			<div class="--mt-step-3">
+			<div class="steps__step --mt-step-3">
 
 				<div class="container">
-				
-					<div class="steps__step">
 						
-						<div class="step__number --complete">
-							<div class="step__number-gradient">
-								<div class="step__number-wrap">
-									<span>
-										<span>3</span>
-									</span>
-								</div>
+					<div class="step__number">
+						<div class="step__number-gradient">
+							<div class="step__number-wrap">
+								<span>
+									<span>3</span>
+								</span>
 							</div>
 						</div>
+					</div>
 
-						<div class="step__title">Опросник, для повышения качества диагностики:</div>
+					<div class="step__title">Опросник, для повышения качества диагностики:</div>
 
-						<div class="step__box">
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">1. Какова Ваша основная потребность в повышении эффективности управления запасами?</div>
+								<div class="step__question">1. Какова Ваша основная потребность в повышении эффективности управления запасами?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-11">
-										<label class="form-check-label" for="radio-11">высвобождение денежных средств</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-11">
+									<label class="form-check-label" for="radio-11">высвобождение денежных средств</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-12">
-										<label class="form-check-label" for="radio-12">выполнение целевых показателей бюджета</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-12">
+									<label class="form-check-label" for="radio-12">выполнение целевых показателей бюджета</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-13">
-										<label class="form-check-label" for="radio-13">сокращение критического уровня запасов (повышение уровня сервиса для клиентов)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-13">
+									<label class="form-check-label" for="radio-13">сокращение критического уровня запасов (повышение уровня сервиса для клиентов)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-14">
-										<label class="form-check-label" for="radio-14">оптимизация распределения нагрузки между складами</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-14">
+									<label class="form-check-label" for="radio-14">оптимизация распределения нагрузки между складами</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-15">
-										<label class="form-check-label" for="radio-15">сокращение складских расходов</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-15">
+									<label class="form-check-label" for="radio-15">сокращение складских расходов</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_1" id="radio-16">
-										<label class="form-check-label" for="radio-16">другое</label>
-										<label for="textarea-11" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-11" name="textarea-11" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_1" id="radio-16">
+									<label class="form-check-label" for="radio-16">другое</label>
+									<label for="textarea-11" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-11" name="textarea-11" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">2. Какую основную учетную систему используете?</div>
+								<div class="step__question">2. Какую основную учетную систему используете?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_2" id="radio-21">
-										<label class="form-check-label" for="radio-21">1C</label>
-										<label for="input-21" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
-										<input type="text" class="form-control" id="input-21" name="input-21" disabled>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_2" id="radio-21">
+									<label class="form-check-label" for="radio-21">1C</label>
+									<label for="input-21" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
+									<input type="text" class="form-control" id="input-21" name="input-21" disabled>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_2" id="radio-22">
-										<label class="form-check-label" for="radio-22">SAP</label>
-										<label for="input-22" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
-										<input type="text" class="form-control" id="input-22" name="input-22" disabled>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_2" id="radio-22">
+									<label class="form-check-label" for="radio-22">SAP</label>
+									<label for="input-22" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
+									<input type="text" class="form-control" id="input-22" name="input-22" disabled>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_2" id="radio-23">
-										<label class="form-check-label" for="radio-23">Oracle</label>
-										<label for="input-23" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
-										<input type="text" class="form-control" id="input-23" name="input-23" disabled>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_2" id="radio-23">
+									<label class="form-check-label" for="radio-23">Oracle</label>
+									<label for="input-23" class="step__form-input-label form-label">Укажите версию и конфигурацию:</label>
+									<input type="text" class="form-control" id="input-23" name="input-23" disabled>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_2" id="radio-24">
-										<label class="form-check-label" for="radio-24">многообразие систем</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_2" id="radio-24">
+									<label class="form-check-label" for="radio-24">многообразие систем</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_2" id="radio-25">
-										<label class="form-check-label" for="radio-25">другое</label>
-										<label for="textarea-21" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-21" name="textarea-21" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_2" id="radio-25">
+									<label class="form-check-label" for="radio-25">другое</label>
+									<label for="textarea-21" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-21" name="textarea-21" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">3. Какие запасы нужно оптимизировать?</div>
+								<div class="step__question">3. Какие запасы нужно оптимизировать?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_3" id="radio-31">
-										<label class="form-check-label" for="radio-31">торговые</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_3" id="radio-31">
+									<label class="form-check-label" for="radio-31">торговые</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_3" id="radio-32">
-										<label class="form-check-label" for="radio-32">производственные</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_3" id="radio-32">
+									<label class="form-check-label" for="radio-32">производственные</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_3" id="radio-33">
-										<label class="form-check-label" for="radio-33">сырье и материалы</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_3" id="radio-33">
+									<label class="form-check-label" for="radio-33">сырье и материалы</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_3" id="radio-34">
-										<label class="form-check-label" for="radio-34">компоненты</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_3" id="radio-34">
+									<label class="form-check-label" for="radio-34">компоненты</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_3" id="radio-35">
-										<label class="form-check-label" for="radio-35">готовая продукция</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_3" id="radio-35">
+									<label class="form-check-label" for="radio-35">готовая продукция</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">4. Какая доля товарных запасов на складе управляется по схеме «для наличия» (не «под заказ»)?</div>
+								<div class="step__question">4. Какая доля товарных запасов на складе управляется по схеме «для наличия» (не «под заказ»)?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_4" id="radio-41">
-										<label class="form-check-label" for="radio-41">30% в наличии / 70% под заказ клиента</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_4" id="radio-41">
+									<label class="form-check-label" for="radio-41">30% в наличии / 70% под заказ клиента</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_4" id="radio-42">
-										<label class="form-check-label" for="radio-42">50% в наличии / 50% под заказ клиента</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_4" id="radio-42">
+									<label class="form-check-label" for="radio-42">50% в наличии / 50% под заказ клиента</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_4" id="radio-43">
-										<label class="form-check-label" for="radio-43">70% в наличии / 30% по заказ клиента</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_4" id="radio-43">
+									<label class="form-check-label" for="radio-43">70% в наличии / 30% по заказ клиента</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_4" id="radio-44">
-										<label class="form-check-label" for="radio-44">100% наличие</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_4" id="radio-44">
+									<label class="form-check-label" for="radio-44">100% наличие</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">5. Количество различных категорий (товарных групп) SKU?</div>
+								<div class="step__question">5. Количество различных категорий (товарных групп) SKU?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_5" id="radio-51">
-										<label class="form-check-label" for="radio-51">до 50</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_5" id="radio-51">
+									<label class="form-check-label" for="radio-51">до 50</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_5" id="radio-52">
-										<label class="form-check-label" for="radio-52">от 50 до 100</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_5" id="radio-52">
+									<label class="form-check-label" for="radio-52">от 50 до 100</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_5" id="radio-53">
-										<label class="form-check-label" for="radio-53">от 100 до 300</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_5" id="radio-53">
+									<label class="form-check-label" for="radio-53">от 100 до 300</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_5" id="radio-54">
-										<label class="form-check-label" for="radio-54">более 300</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_5" id="radio-54">
+									<label class="form-check-label" for="radio-54">более 300</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">6. Сколько складов находится в управлении?</div>
+								<div class="step__question">6. Сколько складов находится в управлении?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_6" id="radio-61">
-										<label class="form-check-label" for="radio-61">менее 3</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_6" id="radio-61">
+									<label class="form-check-label" for="radio-61">менее 3</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_6" id="radio-62">
-										<label class="form-check-label" for="radio-62">менее 5</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_6" id="radio-62">
+									<label class="form-check-label" for="radio-62">менее 5</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_6" id="radio-63">
-										<label class="form-check-label" for="radio-63">менее 10</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_6" id="radio-63">
+									<label class="form-check-label" for="radio-63">менее 10</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_6" id="radio-64">
-										<label class="form-check-label" for="radio-64">менее 30</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_6" id="radio-64">
+									<label class="form-check-label" for="radio-64">менее 30</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_6" id="radio-65">
-										<label class="form-check-label" for="radio-65">более 30</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_6" id="radio-65">
+									<label class="form-check-label" for="radio-65">более 30</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">7. Имеется ли запас в транзите от поставщиков на балансе вашей компании?</div>
+								<div class="step__question">7. Имеется ли запас в транзите от поставщиков на балансе вашей компании?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_7" id="radio-71">
-										<label class="form-check-label" for="radio-71">да, в основном на балансе компании</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_7" id="radio-71">
+									<label class="form-check-label" for="radio-71">да, в основном на балансе компании</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_7" id="radio-72">
-										<label class="form-check-label" for="radio-72">нет, в основном на балансе поставщика</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_7" id="radio-72">
+									<label class="form-check-label" for="radio-72">нет, в основном на балансе поставщика</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">8. Имеется ли центральный (распределительный) склад?</div>
+								<div class="step__question">8. Имеется ли центральный (распределительный) склад?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_8" id="radio-81">
-										<label class="form-check-label" for="radio-81">нет, отсутствует</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_8" id="radio-81">
+									<label class="form-check-label" for="radio-81">нет, отсутствует</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_8" id="radio-82">
-										<label class="form-check-label" for="radio-82">менее 2 РЦ</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_8" id="radio-82">
+									<label class="form-check-label" for="radio-82">менее 2 РЦ</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_8" id="radio-83">
-										<label class="form-check-label" for="radio-83">менее 5 РЦ</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_8" id="radio-83">
+									<label class="form-check-label" for="radio-83">менее 5 РЦ</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_8" id="radio-84">
-										<label class="form-check-label" for="radio-84">более 5 РЦ</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_8" id="radio-84">
+									<label class="form-check-label" for="radio-84">более 5 РЦ</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">9. Как на текущий момент прогнозируется спрос?</div>
+								<div class="step__question">9. Как на текущий момент прогнозируется спрос?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_9" id="radio-91">
-										<label class="form-check-label" for="radio-91">эконометрические модели (включая регрессии)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_9" id="radio-91">
+									<label class="form-check-label" for="radio-91">эконометрические модели (включая регрессии)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_9" id="radio-92">
-										<label class="form-check-label" for="radio-92">машинное обучение (включая random forest и т. д.)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_9" id="radio-92">
+									<label class="form-check-label" for="radio-92">машинное обучение (включая random forest и т. д.)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_9" id="radio-93">
-										<label class="form-check-label" for="radio-93">статистический анализ</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_9" id="radio-93">
+									<label class="form-check-label" for="radio-93">статистический анализ</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_9" id="radio-94">
-										<label class="form-check-label" for="radio-94">вручную</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_9" id="radio-94">
+									<label class="form-check-label" for="radio-94">вручную</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_9" id="radio-95">
-										<label class="form-check-label" for="radio-95">другое</label>
-										<label for="textarea-91" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-91" name="textarea-91" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_9" id="radio-95">
+									<label class="form-check-label" for="radio-95">другое</label>
+									<label for="textarea-91" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-91" name="textarea-91" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">10. Какие инструменты прогнозирования спроса используете?</div>
+								<div class="step__question">10. Какие инструменты прогнозирования спроса используете?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_10" id="radio-101">
-										<label class="form-check-label" for="radio-101">MS Excel</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_10" id="radio-101">
+									<label class="form-check-label" for="radio-101">MS Excel</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_10" id="radio-102">
-										<label class="form-check-label" for="radio-102">Python, R и другие</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_10" id="radio-102">
+									<label class="form-check-label" for="radio-102">Python, R и другие</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_10" id="radio-103">
-										<label class="form-check-label" for="radio-103">не прогнозируем спрос</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_10" id="radio-103">
+									<label class="form-check-label" for="radio-103">не прогнозируем спрос</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_10" id="radio-104">
-										<label class="form-check-label" for="radio-104">специализированные системы</label>
-										<label for="textarea-101" class="step__form-input-label form-label --other">Пожалуйста, обозначьте:</label>
-										<textarea class="form-control" id="textarea-101" name="textarea-101" disabled></textarea>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_10" id="radio-104">
+									<label class="form-check-label" for="radio-104">специализированные системы</label>
+									<label for="textarea-101" class="step__form-input-label form-label --other">Пожалуйста, обозначьте:</label>
+									<textarea class="form-control" id="textarea-101" name="textarea-101" disabled></textarea>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_10" id="radio-105">
-										<label class="form-check-label" for="radio-105">другое</label>
-										<label for="textarea-102" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-102" name="textarea-102" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_10" id="radio-105">
+									<label class="form-check-label" for="radio-105">другое</label>
+									<label for="textarea-102" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-102" name="textarea-102" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">11. С каким количеством поставщиков сейчас работаете?</div>
+								<div class="step__question">11. С каким количеством поставщиков сейчас работаете?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_11" id="radio-111">
-										<label class="form-check-label" for="radio-111">менее 50</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_11" id="radio-111">
+									<label class="form-check-label" for="radio-111">менее 50</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_11" id="radio-112">
-										<label class="form-check-label" for="radio-112">менее 100</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_11" id="radio-112">
+									<label class="form-check-label" for="radio-112">менее 100</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_11" id="radio-113">
-										<label class="form-check-label" for="radio-113">менее 200</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_11" id="radio-113">
+									<label class="form-check-label" for="radio-113">менее 200</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_11" id="radio-114">
-										<label class="form-check-label" for="radio-114">более 200</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_11" id="radio-114">
+									<label class="form-check-label" for="radio-114">более 200</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">12. Сколько поставщиков составляют 80% ваших остатков?</div>
+								<div class="step__question">12. Сколько поставщиков составляют 80% ваших остатков?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_12" id="radio-121">
-										<label class="form-check-label" for="radio-121">менее 50</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_12" id="radio-121">
+									<label class="form-check-label" for="radio-121">менее 50</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_12" id="radio-122">
-										<label class="form-check-label" for="radio-122">менее 100</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_12" id="radio-122">
+									<label class="form-check-label" for="radio-122">менее 100</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_12" id="radio-123">
-										<label class="form-check-label" for="radio-123">менее 200</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_12" id="radio-123">
+									<label class="form-check-label" for="radio-123">менее 200</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_12" id="radio-124">
-										<label class="form-check-label" for="radio-124">более 200</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_12" id="radio-124">
+									<label class="form-check-label" for="radio-124">более 200</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">13. Насколько у вас сильная переговорная позиция с поставщиками?</div>
+								<div class="step__question">13. Насколько у вас сильная переговорная позиция с поставщиками?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_13" id="radio-131">
-										<label class="form-check-label" for="radio-131">сильная (оказываем сильное влияние на условия поставщиков: минимальные партии, сроки поставки и т. д.)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_13" id="radio-131">
+									<label class="form-check-label" for="radio-131">сильная (оказываем сильное влияние на условия поставщиков: минимальные партии, сроки поставки и т. д.)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_13" id="radio-132">
-										<label class="form-check-label" for="radio-132">умеренная (имеем ограниченное влияние, поставщики готовы менять свои условия, но в обмен на повышение уровня закупочных цен)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_13" id="radio-132">
+									<label class="form-check-label" for="radio-132">умеренная (имеем ограниченное влияние, поставщики готовы менять свои условия, но в обмен на повышение уровня закупочных цен)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_13" id="radio-133">
-										<label class="form-check-label" for="radio-133">слабая позиция (поставщики выполняют свои планы на выгодных им условиях, мы вынуждены с ними мириться)</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_13" id="radio-133">
+									<label class="form-check-label" for="radio-133">слабая позиция (поставщики выполняют свои планы на выгодных им условиях, мы вынуждены с ними мириться)</label>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">14. Какую аналитику по запасам сейчас проводите?</div>
+								<div class="step__question">14. Какую аналитику по запасам сейчас проводите?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_14" id="radio-141">
-										<label class="form-check-label" for="radio-141">расчет оптимального уровня запаса по теории ограничений</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_14" id="radio-141">
+									<label class="form-check-label" for="radio-141">расчет оптимального уровня запаса по теории ограничений</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_14" id="radio-142">
-										<label class="form-check-label" for="radio-142">проведение сравнительного анализа (вкл. по поставщикам, закупщикам, складам и т. д.)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_14" id="radio-142">
+									<label class="form-check-label" for="radio-142">проведение сравнительного анализа (вкл. по поставщикам, закупщикам, складам и т. д.)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_14" id="radio-143">
-										<label class="form-check-label" for="radio-143">сегментирование по принципу ABC-XYZ</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_14" id="radio-143">
+									<label class="form-check-label" for="radio-143">сегментирование по принципу ABC-XYZ</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_14" id="radio-144">
-										<label class="form-check-label" for="radio-144">другое</label>
-										<label for="textarea-141" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-141" name="textarea-141" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_14" id="radio-144">
+									<label class="form-check-label" for="radio-144">другое</label>
+									<label for="textarea-141" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-141" name="textarea-141" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">15. Как сейчас определяете оптимальный запас по товарным категориям, какую систему/инструмент для этого используете (MS Excel, учетная система, специализированные инструменты)?</div>
+								<div class="step__question">15. Как сейчас определяете оптимальный запас по товарным категориям, какую систему/инструмент для этого используете (MS Excel, учетная система, специализированные инструменты)?</div>
 
-									<div class="form-check step__form-check">
-										<label for="textarea-151" class="step__form-input-label form-label">Пожалуйста, опишите:</label>
-										<textarea class="form-control" id="textarea-151" name="textarea-151"></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<label for="textarea-151" class="step__form-input-label form-label">Пожалуйста, опишите:</label>
+									<textarea class="form-control" id="textarea-151" name="textarea-151"></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">16.	Какие инструменты визуализации данных используете?</div>
+								<div class="step__question">16.	Какие инструменты визуализации данных используете?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_16" id="radio-161">
-										<label class="form-check-label" for="radio-161">специализированные решения (включая Modus, QlikSense, Tableau, Power BI)</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_16" id="radio-161">
+									<label class="form-check-label" for="radio-161">специализированные решения (включая Modus, QlikSense, Tableau, Power BI)</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_16" id="radio-162">
-										<label class="form-check-label" for="radio-162">MS Excel</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_16" id="radio-162">
+									<label class="form-check-label" for="radio-162">MS Excel</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_16" id="radio-163">
-										<label class="form-check-label" for="radio-163">инструменты в рамках учетной системы</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_16" id="radio-163">
+									<label class="form-check-label" for="radio-163">инструменты в рамках учетной системы</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_16" id="radio-164">
-										<label class="form-check-label" for="radio-164">другое</label>
-										<label for="textarea-161" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
-										<textarea class="form-control" id="textarea-161" name="textarea-161" disabled></textarea>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_16" id="radio-164">
+									<label class="form-check-label" for="radio-164">другое</label>
+									<label for="textarea-161" class="step__form-input-label form-label --other">Напишите, свой вариант:</label>
+									<textarea class="form-control" id="textarea-161" name="textarea-161" disabled></textarea>
 								</div>
 
 							</div>
 
 						</div>
 
-						<div class="step__box">
+					</div>
+
+					<div class="step__box">
+						
+						<div class="step__box-gradient">
 							
-							<div class="step__box-gradient">
+							<div class="step__box-wrap">
 								
-								<div class="step__box-wrap">
-									
-									<div class="step__question">17. Насколько высокий приоритет имеет задача по повышению эффективности управления запасами для вашей компании?</div>
+								<div class="step__question">17. Насколько высокий приоритет имеет задача по повышению эффективности управления запасами для вашей компании?</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_17" id="radio-171">
-										<label class="form-check-label" for="radio-171">очень высокий приоритет</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_17" id="radio-171">
+									<label class="form-check-label" for="radio-171">очень высокий приоритет</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_17" id="radio-172">
-										<label class="form-check-label" for="radio-172">высокий приоритет</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_17" id="radio-172">
+									<label class="form-check-label" for="radio-172">высокий приоритет</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_17" id="radio-173">
-										<label class="form-check-label" for="radio-173">средний приоритет</label>
-									</div>
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_17" id="radio-173">
+									<label class="form-check-label" for="radio-173">средний приоритет</label>
+								</div>
 
-									<div class="form-check step__form-check">
-										<input class="form-check-input" type="radio" name="RADIO_17" id="radio-174">
-										<label class="form-check-label" for="radio-174">низкий приоритет, просто присматриваемся к доступным решениям</label>
-									</div>
-
+								<div class="form-check step__form-check">
+									<input class="form-check-input" type="radio" name="RADIO_17" id="radio-174">
+									<label class="form-check-label" for="radio-174">низкий приоритет, просто присматриваемся к доступным решениям</label>
 								</div>
 
 							</div>
@@ -752,9 +749,13 @@
 					</div>
 
 				</div>
+
+			</div>
 				
-				<div class="steps__step --step-4">
-					
+			<div class="steps__step --step-4">
+
+				<div class="container">
+						
 					<div class="step__number">
 						<div class="step__number-gradient">
 							<div class="step__number-wrap">
@@ -773,12 +774,12 @@
 
 							<div class="form-group step__form-group">
 								<label class="form-check-label" for="name">Имя</label>
-								<input type="text" name="name" class="form-control" id="name" placeholder="Как к Вам обращаться?">
+								<input type="text" name="name" class="form-control" id="name" placeholder="Как к Вам обращаться?" required>
 							</div>
 
 							<div class="form-group step__form-group">
 								<label class="form-check-label" for="phone">Телефон</label>
-								<input type="tel" name="phone" class="form-control mask-phone" id="phone">
+								<input type="tel" name="phone" class="form-control mask-phone" id="phone" required>
 							</div>
 							
 						</div>
@@ -787,12 +788,12 @@
 
 							<div class="form-group step__form-group">
 								<label class="form-check-label" for="email">Почта</label>
-								<input type="text" name="email" class="form-control" id="email">
+								<input type="text" name="email" class="form-control" id="email" required>
 							</div>
 
 							<div class="form-group step__form-group">
 								<label class="form-check-label" for="company">Компания</label>
-								<input type="tel" name="company" class="form-control" id="company" placeholder="Название компании">
+								<input type="text" name="company" class="form-control" id="company" placeholder="Название компании">
 							</div>
 							
 						</div>
@@ -806,9 +807,9 @@
 
 					<div class="step__submit text-center">
 						<button type="submit" class="btn btn-primary">Отправить</button>
-					</div>
+					</div>			
 
-				</div>
+				</div>	
 
 			</div>
 

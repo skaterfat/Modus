@@ -5,6 +5,20 @@
   */
 
 /*!
+ * @fileOverview TouchSwipe - jQuery Plugin
+ * @version 1.6.18
+ *
+ * @author Matt Bryson http://www.github.com/mattbryson
+ * @see https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+ * @see http://labs.rampinteractive.co.uk/touchSwipe/
+ * @see http://plugins.jquery.com/project/touchSwipe
+ * @license
+ * Copyright (c) 2010-2015 Matt Bryson
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ */
+
+/*!
  * Sizzle CSS Selector Engine v2.3.5
  * https://sizzlejs.com/
  *
@@ -37,6 +51,10 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 */
 
 /*! Select2 4.0.13 | https://github.com/select2/select2/blob/master/LICENSE.md */
+
+/*! jQuery Validation Plugin - v1.19.2 - 5/23/2020
+ * https://jqueryvalidation.org/
+ * Copyright (c) 2020 Jörn Zaefferer; Licensed MIT */
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.

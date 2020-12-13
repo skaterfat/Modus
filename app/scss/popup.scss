@@ -216,6 +216,10 @@ body.body--popup-show {
 				margin-bottom: 0;
 			}
 
+			&-group {
+				position: relative;
+			}
+
 			& input[type="text"]::placeholder,
 			& input[type="tel"]::placeholder,
 			& input[type="email"]::placeholder,

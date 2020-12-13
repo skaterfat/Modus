@@ -15,6 +15,9 @@ require("waypoints/lib/jquery.waypoints.min.js");
 //import anime from 'animejs/lib/anime.es.js';
 //const Handlebars = require("handlebars");
 require("select2/dist/js/select2.min.js");
+require("jquery-validation/dist/jquery.validate.min.js");
+require("jquery-validation/dist/localization/messages_ru.min.js");
+require("jquery-touchswipe/jquery.touchSwipe.min.js");
 
 /*global.jQuery = $;
 global.$ = $;*/
@@ -142,6 +145,17 @@ global.$ = $;*/
 		});
 
 		var stickyOffset = $('.category-menu').offset().top;
+
+		if($('a.smooth-scroll').length) {
+			$('a.smooth-scroll').on('click', function(event) {
+				var href = $(this).attr("href"),
+					offsetTop = href === "#" ? 0 : $(href).offset().top;
+				$('html, body').stop().animate({ 
+					scrollTop: offsetTop - ($('.category-menu').height() ? $('.category-menu').height() : 0)
+				}, 500);
+			});
+		}
+
 
 		$(window).on('scroll', function(event) {
 
@@ -363,6 +377,19 @@ global.$ = $;*/
 
 		});
 
+
+
+		$('.modus-ims__for-whom .for-whom__tabs .tabs__content').swipe({
+			swipeLeft: function(event, phase, direction, distance) {
+				$('.tabs__nav-left').trigger('click');
+			},
+			swipeRight: function(event, phase, direction, distance) {
+				$('.tabs__nav-right').trigger('click');
+			},
+			allowPageScroll:"auto",
+			threshold: 75
+		});
+
 		$(window).on('resize', function(event) {
 			$('.owl-carousel.owl-loaded').trigger('refresh.owl.carousel');				
 		});
@@ -400,48 +427,6 @@ global.$ = $;*/
 				setCookie('WELCOME_POPUP', 1, {expires: 86400 * 30 * 365 * 2, path: '/'});*/
 		});
 
-		$('.popup--mini form input.form-control').on('focus change input', function(event) {
-			
-			/*var inputIndex = parseInt($(this).parent().index()),
-				progress = $(this).closest('.popup').find('.popup__progress');*/
-
-			var inputIndex = parseInt($(this).parent().index()),
-				progress = $(this).closest('.popup').find('.popup__progress');
-
-			progress.find('.progress-dot:eq('+inputIndex+')').addClass('--active');
-			validateMiniFormProgressBar();
-
-
-		}).on('blur', function(event) {
-
-			var inputIndex = parseInt($(this).parent().index()),
-				progress = $(this).closest('.popup').find('.popup__progress'),
-				thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
-
-			thisProgressDot.removeClass('--active');
-			validateMiniFormProgressBar();
-
-			/*var inputIndex = parseInt($(this).parent().index()),
-				progress = $(this).closest('.popup').find('.popup__progress'),
-				thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
-
-			if($(this).val().length == 0) {
-				thisProgressDot.removeClass('--complete');
-			}
-			else {
-				thisProgressDot.addClass('--complete');
-			}
-
-			thisProgressDot.removeClass('--active');
-
-			var lastCompleteDot = progress.find('.progress-dot.--complete:last'),
-				left = lastCompleteDot.length > 0 ? parseInt(parseFloat(lastCompleteDot.css('left')) / parseFloat(progress.width()) * 100) : 0;
-
-			progress.children('.progress-bar').css('width', left + "%");*/
-
-
-		});
-
 		$(document).on('mouseup', function(event) {
 			event.preventDefault();
 			if($('body').hasClass('body--popup-show')) {
@@ -451,13 +436,145 @@ global.$ = $;*/
 			}	
 		});
 
+		//Данный блок формы находится под управлением в CMS
+		/**var $modusImsExpressDiagnosticForm = $('form[name="FORM_MODUS_IMS_EXPRESS_DIAGNOSTIC"]');
+
+		if($modusImsExpressDiagnosticForm.length) {
+
+			validateModusImsExpressDiagnosicSteps();
+
+			$modusImsExpressDiagnosticForm.find('select, input[type="radio"], input[type="checkbox"]').on('change', function(event) {
+				validateModusImsExpressDiagnosicSteps();
+			});
+
+			$modusImsExpressDiagnosticForm.find('textarea, input[type="text"], input[type="tel"], input[type="email"]').on('blur', function(event) {
+				validateModusImsExpressDiagnosicSteps();
+			});
+
+			function validateModusImsExpressDiagnosicSteps() {
+
+				$modusImsExpressDiagnosticForm.find('.steps__step .step__number').removeClass('--focus --complete');
+
+
+				var bStep1Complete = true,
+					bStep2Complete = true,
+					bStep3Complete = true,
+					bStep4Complete = true;
+				
+				$modusImsExpressDiagnosticForm.find('.steps__step').each(function(index, element) {
+					
+					// step 1
+					if(index == 0) {
+
+						if($(element).find('select').val().length == 0)
+							bStep1Complete = false;
+
+						if(bStep1Complete)
+							$(element).find('.step__number').addClass('--complete');
+
+					}					
+					// step 2
+					else if(index == 1) {
+
+						if($(element).find('input[type="radio"]:checked').length == 0)
+							bStep2Complete = false;
+
+						if(bStep2Complete)
+							$(element).find('.step__number').addClass('--complete');
+
+					}		
+					// step 3
+					else if(index == 2) {
+
+						$(element).find('.step__box').each(function(i, box) {
+
+
+							//Если бокс содержит только текстареа
+							if($(box).find('input[type="radio"]').length == 0) {
+
+								if($(box).find('textarea').length && $(box).find('textarea').val().length == 0)
+									bStep3Complete = false;
+
+							}
+							else {
+									
+								if($(box).find('input[type="radio"]:checked').length) {
+
+									if(
+										($(box).find('input[type="radio"]:checked').siblings('textarea').length && $(box).find('input[type="radio"]:checked').siblings('textarea').val().length == 0) ||
+										($(box).find('input[type="radio"]:checked').siblings('input[type="text"]').length && $(box).find('input[type="radio"]:checked').siblings('input[type="text"]').val().length == 0)
+
+									)
+										bStep3Complete = false;
+								}
+								else
+									bStep3Complete = false;
+							}
+
+						});
+
+						if(bStep3Complete)
+							$(element).find('.step__number').addClass('--complete');
+
+					}
+					// step 4
+					else if(index == 3) {
+
+						$(element).find('input[type="text"]:required, input[type="tel"]:required, input[type="email"]:required').each(function(i, el) {
+							if($(el).val().length == 0)
+								bStep4Complete = false;
+						});
+
+						if(bStep4Complete)
+							$(element).find('.step__number').addClass('--complete');
+
+					}
+
+				});
+
+				if(!bStep1Complete)
+					$modusImsExpressDiagnosticForm.find('.steps__step:eq(0) .step__number').addClass('--focus');
+				else if(!bStep2Complete)
+					$modusImsExpressDiagnosticForm.find('.steps__step:eq(1) .step__number').addClass('--focus');
+				else if(!bStep3Complete)
+					$modusImsExpressDiagnosticForm.find('.steps__step:eq(2) .step__number').addClass('--focus');
+				else if(!bStep4Complete)
+					$modusImsExpressDiagnosticForm.find('.steps__step:eq(3) .step__number').addClass('--focus');
+
+				return (bStep1Complete && bStep2Complete && bStep3Complete && bStep4Complete);
+
+			}
+			
+		}**/
+
+		//Данный блок формы находится под управлением в CMS
+		/**
+		$('.popup--mini form input.form-control').on('focus change input', function(event) {
+
+			var inputIndex = parseInt($(this).parent().index('.popup__form-group')),
+				progress = $(this).closest('.popup').find('.popup__progress');
+
+			progress.find('.progress-dot:eq('+inputIndex+')').addClass('--active');
+			validateMiniFormProgressBar();
+
+
+		}).on('blur', function(event) {
+			var inputIndex = parseInt($(this).parent().index('.popup__form-group')),
+				progress = $(this).closest('.popup').find('.popup__progress'),
+				thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
+
+			thisProgressDot.removeClass('--active');
+			validateMiniFormProgressBar();
+
+		});
+
 		function validateMiniFormProgressBar() {
 
 			var progress = $('.popup--mini').find('.popup__progress');
 
 			$('.popup--mini form input.form-control').each(function(index, input) {
 
-				var inputIndex = parseInt($(input).parent().index()),
+				var inputIndex = parseInt($(input).parent().index('.popup__form-group')),
 					thisProgressDot = progress.find('.progress-dot:eq('+inputIndex+')');
 
 				//alert(inputIndex)
@@ -480,6 +597,7 @@ global.$ = $;*/
 			progress.children('.progress-bar').css('width', left + "%");
 
 		}
+		**/
 		
 	});
 

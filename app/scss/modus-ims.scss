@@ -755,8 +755,6 @@
 
 				}
 
-
-
 			}
 
 			&__before {
@@ -785,6 +783,15 @@
 				&-right {
 					flex: 0;
 					padding-left: 40px;
+				}
+
+				&-picture {
+
+					& > a > picture > .how-it-works__screen {
+						width: 653px;
+						max-width: inherit;
+					}
+
 				}
 
 			}
@@ -2741,7 +2748,7 @@
 		&__video {
 
 			&-left {
-				flex: 0 0 562px;
+				flex: 0 0 545px;
 			}
 
 			&-text {
@@ -2761,6 +2768,11 @@
 
 					&-picture {
 						max-width: 425px;
+
+						& picture {
+							display: inline-block;
+						}
+
 					}
 
 				}
@@ -2772,6 +2784,13 @@
 					}
 
 					&-picture {
+
+						/*& picture,
+						& img {
+							display: inline-block;
+							position: relative;
+    						left: -100px;
+						}*/
 
 						& picture,
 						& img {
@@ -4121,6 +4140,42 @@
 
 		}
 
+		&__tariffs {
+
+			& .tariffs {				
+
+				&__list {					
+
+					&-buttons {
+
+						max-width: 330px;
+						margin: 0 auto;
+
+						& a {
+							width: 100%;
+						}
+
+						& a:first-child {
+							margin-right: 0px;
+							margin-bottom: 24px;
+						}
+
+						& a:last-child {
+
+							& span:after {
+								top: 12px;
+							}
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
 		&__free-express-diagnostic {
 
 			padding: 96px 0 16px;
@@ -4192,6 +4247,28 @@
 							font-weight: 700;
 						}*/
 
+					}
+
+				}
+
+			}
+
+		}
+
+		&__express-diagnostic {
+
+			& .express-diagnostic {
+
+				&__buttons {
+
+					& a:first-child {
+						margin-right: 0px;
+						margin-bottom: 24px;
+						width: 330px;
+					}
+
+					& a.btn-secondary {
+						width: 330px;
 					}
 
 				}
@@ -5275,6 +5352,14 @@
 						& a:first-child {
 							margin-right: 0px;
 							margin-bottom: 24px;
+						}
+
+						& a:last-child {
+
+							& span:after {
+								top: 10px;
+							}
+
 						}
 
 					}

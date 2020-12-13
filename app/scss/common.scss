@@ -408,6 +408,26 @@ body.body--popup-show {
 
 	}
 
+	& .btn-success {
+
+		color: #adc4d8;
+		background: transparent;
+		border: solid 2px #adc4d8;
+		padding: 13px 59px;
+
+		&:hover,
+		&:focus {
+			cursor: default;
+			color: #adc4d8;
+			background: transparent;
+		}
+		
+		&:focus {
+			opacity: 1;
+		}
+
+	}
+
 	.rouble {
 		font-family: 'Roboto', sans-serif;
 	}
@@ -1387,6 +1407,8 @@ body.body--popup-show {
 
 			&__picture {
 
+				text-align: center;
+
 				/*&-screen {
 					left: 93px;
 				}*/
@@ -1658,6 +1680,8 @@ body.body--popup-show {
 		& .presentation-download {
 
 			&__picture {
+				
+				text-align: center;
 
 				/*&-screen {
 					left: 50%;

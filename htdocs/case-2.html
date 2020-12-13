@@ -261,9 +261,9 @@
 
 		<div class="stage__picture d-none d-lg-block">
 			<picture>
-				<source srcset="/images/cases/case-3@1x.webp 1x, /images/cases/case-3@2x.webp 2x" type="image/webp">
-				<source srcset="/images/cases/case-3@1x.png 1x, /images/cases/case-3@2x.png 2x">
-				<img src="/images/cases/case-3@1x.png" alt="" title="">
+				<source srcset="/images/cases/case-4@1x.webp 1x, /images/cases/case-4@2x.webp 2x" type="image/webp">
+				<source srcset="/images/cases/case-4@1x.png 1x, /images/cases/case-4@2x.png 2x">
+				<img src="/images/cases/case-4@1x.png" alt="" title="">
 			</picture>	
 		</div>
 
@@ -293,9 +293,9 @@
 
 				<div class="stage__picture">
 					<picture>
-						<source srcset="/images/cases/case-3@1x.webp 1x, /images/cases/case-3@2x.webp 2x" type="image/webp">
-						<source srcset="/images/cases/case-3@1x.png 1x, /images/cases/case-3@2x.png 2x">
-						<img src="/images/cases/case-3@1x.png" alt="" title="">
+						<source srcset="/images/cases/case-4@1x.webp 1x, /images/cases/case-4@2x.webp 2x" type="image/webp">
+						<source srcset="/images/cases/case-4@1x.png 1x, /images/cases/case-4@2x.png 2x">
+						<img src="/images/cases/case-4@1x.png" alt="" title="">
 					</picture>	
 				</div>
 
@@ -358,6 +358,7 @@
 					</div>
 					<div class="form-group --submit">
 						<button type="submit" class="btn btn-primary">Отправить</button>
+						<div class="btn btn-success d-none">Отправлено</div>
 					</div>
 				</form>
 			</div>
@@ -499,19 +500,22 @@
 							<div class="popup__desc text-center">Я расскажу Вам всё о сертификации и отвечу на все вопросы. Это бесплатно и ни к чему не обязывает</div> -->
 							<form class="form popup__form">
 
-								<div class="form-group popup__form-group --mb-20">
+								<div class="form-group popup__form-group --mb-20 error">
 									<label class="form-label" for="name">Имя</label>
 									<input type="text" name="NAME" class="form-control" placeholder="Имя">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
-								<div class="form-group popup__form-group --mb-20">
+								<div class="form-group popup__form-group --mb-20 valid">
 									<label class="form-label" for="name">Почта</label>
 									<input type="email" name="EMAIL" class="form-control" placeholder="Почта">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
 								<div class="form-group popup__form-group --mb-20">
 									<label class="form-label" for="name">Телефон</label>
 									<input type="tel" name="PHONE" class="form-control mask-phone" placeholder="Телефон">
+									<span class="form-error-message">Обязательное поле</span>
 								</div>
 
 								<div class="form-group popup__form-group --mb-35">
@@ -526,6 +530,7 @@
 
 								<div class="form-group popup__submit text-center">
 									<button type="submit" class="btn btn-primary">Отправить</button>
+									<div class="btn btn-success d-none">Отправлено</div>
 								</div>
 
 							</form>

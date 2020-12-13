@@ -7,6 +7,8 @@
 	"dependencies": {
 		"bootstrap": "^5.0.0-alpha2",
 		"jquery": "^3.5.1",
+		"jquery-touchswipe": "^1.6.19",
+		"jquery-validation": "^1.19.2",
 		"popper.js": "^1.16.1"
 	},
 	"devDependencies": {
@@ -21,6 +23,7 @@
 		"countup.js": "^2.0.7",
 		"css-loader": "^4.3.0",
 		"cssnano": "^4.1.10",
+		"expose-loader": "^1.0.3",
 		"extract-svg-sprite-webpack-plugin": "^0.8.1",
 		"extract-text-webpack-plugin": "^4.0.0-beta.0",
 		"file-loader": "^6.1.1",
